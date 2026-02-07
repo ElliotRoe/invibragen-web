@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Public+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 42 24% 96%;
+  --foreground: 205 14% 22%;
+  --muted: 0 0% 100%;
+  --muted-foreground: 205 9% 45%;
+  --border: 200 16% 86%;
+  --card: 0 0% 100%;
+  --accent: 175 40% 54%;
+  --accent-foreground: 205 14% 22%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background font-sans text-foreground antialiased;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 8% 8%, rgba(94, 186, 186, 0.2), transparent 38%),
+    radial-gradient(circle at 92% 14%, rgba(216, 255, 220, 0.28), transparent 34%),
+    linear-gradient(160deg, #f8f8f4 0%, #f4f5ef 55%, #f2f4ef 100%);
+}
+
+a {
+  @apply text-inherit no-underline;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(to right, hsl(var(--border) / 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--border) / 0.5) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: -1px -1px;
+}
+
+.section-divider {
+  @apply h-px w-full bg-border/80;
+}

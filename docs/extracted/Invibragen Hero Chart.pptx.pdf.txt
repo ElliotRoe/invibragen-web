@@ -1,0 +1,25 @@
+# FILE: Invibragen Hero Chart.pptx.pdf
+# PAGES: 1
+
+
+===== PAGE 1 =====
+High-Throughput Without Data Quality Trade-offs
+Conventional workflows force a choice between speed and sensitivity. 
+Invibragen breaks that trade-off.
+High Data Quality
+(Stable, Reproducible Signals)
+Low Data Quality
+(Frequent Signal Loss/Variability)
+Low Throughput
+(10-50 Samples per 
+Instrument)
+INVIBRAGENConventional ESI 
+(Nano-flow)
+High Throughput
+(1-5K Samples per 
+Instrument)
+Conventional ESI 
+(Micro-flow)
+Other Spray-Based 
+Sources
+*Illustrative comparison based on peer-reviewed studies and representative workflows.
