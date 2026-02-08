@@ -1,74 +1,96 @@
 import {
   ArrowRight,
-  Beaker,
-  ChartNoAxesCombined,
   CircleDollarSign,
   Clock3,
-  Sparkles,
+  Microscope,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 import { Button } from '../components/ui/button'
 import { Card, CardContent } from '../components/ui/card'
 
-const leadershipStats = [
-  {
-    value: '105K+',
-    label: 'Scientific Citations',
-    icon: ChartNoAxesCombined,
-  },
-  {
-    value: '5-YR',
-    label: 'NSF & NIH-Funded Research Programs',
-    icon: Beaker,
-  },
-  {
-    value: '6',
-    label: 'Peer-Reviewed Innovation Awards',
-    icon: Sparkles,
-  },
-]
+type Pillar = {
+  title: string
+  kicker: string
+  body: string
+  icon: typeof Clock3
+  visual: 'stack' | 'metrics' | 'network'
+  details: string[]
+}
 
-const pillars = [
+const pillars: Pillar[] = [
   {
     title: 'Move Faster',
     kicker: 'Ultra High-Throughput Analysis',
-    body: 'Up to 10x faster turnaround from sample to insight while maintaining sensitivity and fidelity across blood, saliva, and other matrices.',
+    body: 'Up to 10x faster turnaround from sample to insight without sacrificing data quality.',
     icon: Clock3,
+    visual: 'stack',
+    details: [
+      'Speed: Up to 10x faster turnaround from sample to insight.',
+      'Sensitivity and fidelity: Maintains signal quality at high speed.',
+      'Flexibility: Applicable across blood, saliva, and other matrices.',
+    ],
   },
   {
     title: 'Spend Less',
     kicker: 'Lower Cost per Result',
-    body: 'Greater output from existing instruments, fewer reruns, and more efficient workflows that reduce waste across time, samples, and reagents.',
+    body: 'Higher throughput improves lab economics with more output and less operational waste.',
     icon: CircleDollarSign,
+    visual: 'metrics',
+    details: [
+      'Greater output from existing instruments and teams.',
+      'Fewer reruns and failed analyses.',
+      'Lower cost per meaningful result through better utilization.',
+    ],
   },
   {
     title: 'Discover More',
     kicker: 'Scale Discovery with Confidence',
-    body: 'Analyze orders of magnitude more samples across broad molecular ranges to separate real biological signal from noise with higher statistical confidence.',
-    icon: Sparkles,
+    body: 'Analyze larger cohorts across broad molecular ranges to separate true biological signals from noise.',
+    icon: Microscope,
+    visual: 'network',
+    details: [
+      'Analyze orders of magnitude more samples across proteins or metabolites.',
+      'Improve statistical confidence across population-level studies.',
+      'Unlock discoveries that are difficult with conventional workflows.',
+    ],
   },
 ]
 
-function HeroChart() {
-  return (
-    <Card className="">
-      <CardContent className="space-y-4">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-brand">
-            High-Throughput Without Data Quality Trade-offs
-          </p>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Conventional workflows force a choice between speed and sensitivity. Invibragen breaks that trade-off.
-          </p>
-        </div>
+const trustMarks = [
+  {
+    key: 'nsf',
+    label: 'U.S. National Science Foundation',
+    logoSrc: '/logos/nsf-logo.png',
+    logoAlt: 'NSF Logo',
+  },
+  {
+    key: 'nih',
+    label: 'NIH-Funded Awards',
+    placeholderText: 'NIH Logo',
+  },
+  {
+    key: 'publications',
+    label: 'Leading Publications',
+    placeholderText: 'Publication Logo',
+  },
+  {
+    key: 'innovation',
+    label: 'Peer-Reviewed Innovation Awards',
+    placeholderText: 'Award Logo',
+  },
+]
 
-        <div className="overflow-hidden rounded-2xl border border-border/80 bg-[#f6f6f3] p-2 sm:p-3">
+function ComparisonChart() {
+  return (
+    <Card className="bg-white shadow-[0_10px_28px_-24px_rgba(31,45,60,0.6)]">
+      <CardContent className="p-3 sm:p-4">
+        <div className="overflow-hidden">
           <svg
             aria-label="Throughput and data quality comparison"
             className="h-auto w-full"
             role="img"
-            viewBox="0 0 1000 620"
+            viewBox="0 0 1000 560"
           >
             <defs>
               <marker
@@ -83,25 +105,15 @@ function HeroChart() {
               </marker>
             </defs>
 
-            <rect
-              fill="none"
-              height="520"
-              stroke="#d6d9dc"
-              strokeWidth="2"
-              width="860"
-              x="70"
-              y="40"
-            />
-
             <line
               markerEnd="url(#axis-arrow)"
               markerStart="url(#axis-arrow)"
               stroke="#adb3b7"
               strokeWidth="2"
-              x1="250"
-              x2="750"
-              y1="300"
-              y2="300"
+              x1="70"
+              x2="930"
+              y1="285"
+              y2="285"
             />
             <line
               markerEnd="url(#axis-arrow)"
@@ -110,196 +122,109 @@ function HeroChart() {
               strokeWidth="2"
               x1="500"
               x2="500"
-              y1="140"
-              y2="520"
+              y1="90"
+              y2="500"
             />
 
-            <text
-              fill="#202428"
-              fontSize="24"
-              textAnchor="middle"
-              x="500"
-              y="78"
-            >
+            <text fill="#202428" fontSize="24" textAnchor="middle" x="500" y="34">
               High Data Quality
             </text>
-            <text
-              fill="#525a60"
-              fontSize="18"
-              textAnchor="middle"
-              x="500"
-              y="104"
-            >
+            <text fill="#525a60" fontSize="18" textAnchor="middle" x="500" y="58">
               (Stable, Reproducible Signals)
             </text>
 
-            <text
-              fill="#202428"
-              fontSize="24"
-              textAnchor="middle"
-              x="500"
-              y="578"
-            >
+            <text fill="#202428" fontSize="24" textAnchor="middle" x="500" y="536">
               Low Data Quality
             </text>
-            <text
-              fill="#525a60"
-              fontSize="18"
-              textAnchor="middle"
-              x="500"
-              y="604"
-            >
+            <text fill="#525a60" fontSize="18" textAnchor="middle" x="500" y="558">
               (Frequent Signal Loss/Variability)
             </text>
 
-            <text
-              fill="#202428"
-              fontSize="24"
-              textAnchor="middle"
-              x="175"
-              y="296"
-            >
+            <text fill="#202428" fontSize="24" textAnchor="middle" x="210" y="338">
               Low Throughput
             </text>
-            <text
-              fill="#202428"
-              fontSize="20"
-              textAnchor="middle"
-              x="175"
-              y="326"
-            >
+            <text fill="#202428" fontSize="20" textAnchor="middle" x="210" y="368">
               (10-50 Samples per
             </text>
-            <text
-              fill="#202428"
-              fontSize="20"
-              textAnchor="middle"
-              x="175"
-              y="352"
-            >
+            <text fill="#202428" fontSize="20" textAnchor="middle" x="210" y="394">
               Instrument)
             </text>
 
-            <text
-              fill="#202428"
-              fontSize="24"
-              textAnchor="middle"
-              x="825"
-              y="296"
-            >
+            <text fill="#202428" fontSize="24" textAnchor="middle" x="790" y="338">
               High Throughput
             </text>
-            <text
-              fill="#202428"
-              fontSize="20"
-              textAnchor="middle"
-              x="825"
-              y="326"
-            >
+            <text fill="#202428" fontSize="20" textAnchor="middle" x="790" y="368">
               (1-5K Samples per
             </text>
-            <text
-              fill="#202428"
-              fontSize="20"
-              textAnchor="middle"
-              x="825"
-              y="352"
-            >
+            <text fill="#202428" fontSize="20" textAnchor="middle" x="790" y="394">
               Instrument)
             </text>
 
-            <circle cx="365" cy="185" fill="#c5edc9" r="16" />
-            <text
-              fill="#5f656b"
-              fontSize="16"
-              textAnchor="middle"
-              x="365"
-              y="240"
-            >
+            <circle cx="350" cy="178" fill="#c5edc9" r="16" />
+            <text fill="#5f656b" fontSize="16" textAnchor="middle" x="350" y="232">
               Conventional ESI
             </text>
-            <text
-              fill="#5f656b"
-              fontSize="16"
-              textAnchor="middle"
-              x="365"
-              y="263"
-            >
+            <text fill="#5f656b" fontSize="16" textAnchor="middle" x="350" y="255">
               (Nano-flow)
             </text>
 
-            <circle cx="695" cy="192" fill="#4eaea9" r="17" />
-            <text
-              fill="#4eaea9"
-              fontSize="18"
-              fontWeight="700"
-              textAnchor="middle"
-              x="695"
-              y="248"
-            >
+            <circle cx="700" cy="186" fill="#4eaea9" r="17" />
+            <text fill="#4eaea9" fontSize="18" fontWeight="700" textAnchor="middle" x="700" y="238">
               INVIBRAGEN
             </text>
 
-            <circle cx="405" cy="402" fill="#7a7e83" r="16" />
-            <text
-              fill="#666b70"
-              fontSize="16"
-              textAnchor="middle"
-              x="405"
-              y="452"
-            >
+            <circle cx="395" cy="380" fill="#7a7e83" r="16" />
+            <text fill="#666b70" fontSize="16" textAnchor="middle" x="395" y="432">
               Conventional ESI
             </text>
-            <text
-              fill="#666b70"
-              fontSize="16"
-              textAnchor="middle"
-              x="405"
-              y="475"
-            >
+            <text fill="#666b70" fontSize="16" textAnchor="middle" x="395" y="455">
               (Micro-flow)
             </text>
 
-            <circle cx="565" cy="322" fill="#c5c7ca" r="16" />
-            <text
-              fill="#6d7277"
-              fontSize="16"
-              textAnchor="middle"
-              x="565"
-              y="367"
-            >
+            <circle cx="565" cy="310" fill="#c5c7ca" r="16" />
+            <text fill="#6d7277" fontSize="16" textAnchor="middle" x="565" y="354">
               Other Spray-Based
             </text>
-            <text
-              fill="#6d7277"
-              fontSize="16"
-              textAnchor="middle"
-              x="565"
-              y="390"
-            >
+            <text fill="#6d7277" fontSize="16" textAnchor="middle" x="565" y="377">
               Sources
             </text>
           </svg>
         </div>
-
-        <p className="text-[11px] text-muted-foreground">
-          Illustrative comparison based on peer-reviewed studies and representative workflows.
-        </p>
       </CardContent>
     </Card>
+  )
+}
+
+function HeroChart() {
+  return (
+    <div className="space-y-3 lg:flex lg:h-full lg:flex-col">
+      <Card className="overflow-hidden bg-white shadow-[0_10px_28px_-24px_rgba(31,45,60,0.6)] lg:flex-1">
+        <CardContent className="aspect-[4/3] p-0">
+          <img
+            alt="Spanda plume technology hardware setup"
+            className="block h-full w-full object-cover"
+            src="/images/spanda-plume-hero.png"
+          />
+        </CardContent>
+      </Card>
+
+      <p className="text-[11px] text-muted-foreground sm:px-1">
+        Our vibrating sharp-edge spray ionization (VSSI) plume technology powers the Spanda(TM) product line.
+      </p>
+    </div>
   )
 }
 
 export function HomePage() {
   return (
     <div className="space-y-12 sm:space-y-16">
-      <section className="grid gap-8 lg:grid-cols-[1fr_0.96fr] lg:items-start">
+      <section className="grid gap-8 lg:grid-cols-[1fr_0.96fr] lg:items-stretch">
         <div className="space-y-6">
           <span className="inline-flex rounded-full bg-brand-mint px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand-charcoal">
             Built for Research Labs
           </span>
 
-          <h1 className="max-w-2xl font-display text-5xl font-bold leading-[0.98] tracking-tight sm:text-6xl lg:text-[4.25rem]">
+          <h1 className="max-w-2xl font-display text-5xl font-bold leading-[1.08] tracking-[-0.01em] text-brand-charcoal sm:text-6xl lg:text-[4.25rem]">
             Move Faster.
             <br />
             Spend Less.
@@ -308,7 +233,9 @@ export function HomePage() {
           </h1>
 
           <p className="max-w-xl text-base leading-relaxed text-foreground/90 sm:text-lg">
-            Invibragen helps labs overcome the trade-offs between speed, cost, and data quality. Large-scale molecular analysis becomes practical, reliable, and easier to operationalize with existing infrastructure.
+            Invibragen helps overcome the trade-offs between speed, cost, and data quality. By making
+            large-scale molecular analysis practical and reliable, Invibragen enables labs to unlock new
+            biological insight at a scale that was previously impractical or impossible.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -328,71 +255,97 @@ export function HomePage() {
       </section>
 
       <section className="space-y-6 sm:space-y-8">
-        <section className="">
-          <div className="section-divider" />
-          <div className="-mx-4 border-b border-border/75 bg-gradient-to-b from-brand-mint/10 to-brand-mint/42 px-4 py-10 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-            <div className="mx-auto max-w-6xl space-y-6">
-              <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand">Scientific Leadership</p>
-                <h2 className="font-display text-3xl font-bold tracking-tight text-brand-charcoal sm:text-4xl">
-                  Built on rigor, publications, and funded research
-                </h2>
-                <p className="max-w-3xl text-sm leading-relaxed text-brand-charcoal/90 sm:text-base">
-                  Trusted by scientific teams that need transparent evidence, strong reproducibility, and high-throughput execution without sacrificing data quality.
-                </p>
-              </div>
-
-              <div className="overflow-x-auto pb-1">
-                <div className="grid min-w-[760px] grid-cols-3 gap-7 sm:min-w-0 sm:gap-6">
-                  {leadershipStats.map((stat, index) => {
-                    const Icon = stat.icon
-                    return (
-                      <div key={stat.label} className="relative">
-                        {index < leadershipStats.length - 1 ? (
-                          <span className="absolute right-0 top-1 hidden h-16 w-px bg-border/85 sm:block" />
-                        ) : null}
-                        <Icon className="h-4 w-4 text-brand" />
-                        <p className="mt-3 text-4xl font-semibold leading-none text-brand-charcoal">{stat.value}</p>
-                        <p className="mt-2 max-w-[18ch] text-xs font-semibold uppercase tracking-[0.06em] text-brand-charcoal/80">
-                          {stat.label}
-                        </p>
+        <section>
+          <div className="bg-[#e8f6ee] px-4 py-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-6xl space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#1f5d45]">
+                Scientific Leadership
+              </p>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+                {trustMarks.map((mark) => (
+                  <article
+                    key={mark.key}
+                    className="flex flex-col items-center text-center"
+                  >
+                    {'logoSrc' in mark ? (
+                      <img
+                        alt={mark.logoAlt}
+                        className="h-16 w-16 shrink-0 object-contain"
+                        src={mark.logoSrc}
+                      />
+                    ) : (
+                      <div className="flex h-14 w-16 shrink-0 items-center justify-center rounded-md bg-white/90 text-[9px] font-semibold uppercase tracking-[0.06em] text-muted-foreground">
+                        {mark.placeholderText}
                       </div>
-                    )
-                  })}
-                </div>
+                    )}
+                    <p className="mt-2 text-[10px] font-semibold uppercase leading-tight tracking-[0.06em] text-brand-charcoal">
+                      {mark.label}
+                    </p>
+                  </article>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        <div className="grid gap-0 md:grid-cols-3">
-          {pillars.map((pillar, index) => {
-            const Icon = pillar.icon
-            return (
-              <article
-                key={pillar.title}
-                className={`space-y-4 py-5 ${
-                  index < pillars.length - 1
-                    ? 'border-b border-border/70 md:border-b-0 md:border-r md:border-border/80'
-                    : ''
-                } ${index > 0 ? 'md:pl-6' : ''} ${index < pillars.length - 1 ? 'md:pr-6' : ''}`}
-              >
-                <div className="inline-flex rounded-lg bg-brand-mint p-2.5">
-                  <Icon className="h-4 w-4 text-brand-charcoal" />
-                </div>
+        <section className="space-y-10 pt-4">
+          <div className="grid gap-10 lg:grid-cols-[0.58fr_0.42fr] lg:items-start lg:gap-12">
+            <div className="space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">End-to-End Outcomes</p>
+              <h3 className="font-display text-4xl font-semibold leading-tight tracking-tight text-brand-charcoal sm:text-5xl">
+                Everything you need to move faster, spend less, and discover more.
+              </h3>
+              <p className="max-w-2xl text-base leading-relaxed text-foreground/90 sm:text-lg">
+                Structured as a practical workflow: accelerate throughput, improve economics, and expand discovery confidence at scale.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <ComparisonChart />
+              <p className="text-[11px] text-muted-foreground">
+                Illustrative comparison based on peer-reviewed studies and representative workflows.
+              </p>
+            </div>
+          </div>
 
-                <div>
-                  <p className="font-display text-2xl font-bold tracking-tight">{pillar.title}</p>
-                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand">
-                    {pillar.kicker}
-                  </p>
-                </div>
+          <div className="grid gap-8 border-t border-border/70 pt-10 md:grid-cols-3 md:gap-0">
+            {pillars.map((pillar, index) => {
+              const Icon = pillar.icon
+              return (
+                <article
+                  key={pillar.title}
+                  className={`space-y-5 ${
+                    index > 0 ? 'border-t border-border/60 pt-8 md:border-t-0 md:pt-0' : ''
+                  } ${
+                    index < pillars.length - 1
+                      ? 'md:border-r md:border-border/70 md:pr-8 lg:pr-10'
+                      : ''
+                  } ${index > 0 ? 'md:pl-8 lg:pl-10' : ''}`}
+                >
+                  <div className="inline-flex rounded-lg bg-brand-mint p-2.5">
+                    <Icon className="h-4 w-4 text-brand-charcoal" />
+                  </div>
 
-                <p className="text-sm leading-relaxed text-foreground/90">{pillar.body}</p>
-              </article>
-            )
-          })}
-        </div>
+                  <div>
+                    <p className="font-display text-3xl font-semibold tracking-tight text-brand-charcoal">
+                      {pillar.title}
+                    </p>
+                    <p className="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand">
+                      {pillar.kicker}
+                    </p>
+                  </div>
+
+                  <p className="text-sm leading-relaxed text-foreground/90 sm:text-base">{pillar.body}</p>
+
+                  <ul className="list-disc space-y-1 pl-4 text-sm leading-relaxed text-foreground/85">
+                    {pillar.details.map((detail) => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
+                </article>
+              )
+            })}
+          </div>
+        </section>
       </section>
 
       <section className="">
@@ -408,9 +361,14 @@ export function HomePage() {
             <p className="relative max-w-3xl text-base leading-relaxed text-foreground/90">
               Spanda technology improves ionization efficiency while supporting broad applicability across analytes, matrices, and experimental designs.
             </p>
-            <Button asChild>
-              <Link to="/products-services">Learn More</Link>
-            </Button>
+            <div className="relative flex flex-wrap gap-3">
+              <Button asChild>
+                <Link to="/contact">Contact Us</Link>
+              </Button>
+              <Button asChild variant="outline">
+                <Link to="/products-services">Learn More</Link>
+              </Button>
+            </div>
           </CardContent>
         </Card>
       </section>

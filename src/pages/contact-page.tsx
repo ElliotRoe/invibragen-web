@@ -12,25 +12,38 @@ export function ContactPage() {
 
   return (
     <div className="space-y-8 sm:space-y-10">
-      <section className="space-y-5">
-        <span className="inline-flex rounded-full bg-brand-mint px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand-charcoal">
-          Contact
-        </span>
+      <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+        <div className="space-y-5">
+          <span className="inline-flex rounded-full bg-brand-mint px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand-charcoal">
+            Contact
+          </span>
 
-        <h1 className="font-display text-4xl font-bold tracking-tight text-brand-charcoal sm:text-5xl">
-          Start a conversation
-        </h1>
+          <h1 className="font-display text-4xl font-bold tracking-tight text-brand-charcoal sm:text-5xl">
+            Start a conversation
+          </h1>
 
-        <p className="max-w-3xl text-base leading-relaxed text-foreground/90 sm:text-lg">
-          Interested in exploring high-throughput discovery workflows or initiating a pilot study? We look forward to connecting.
-        </p>
+          <p className="max-w-3xl text-base leading-relaxed text-foreground/90 sm:text-lg">
+            Interested in exploring high-throughput discovery workflows or initiating a pilot study? We look forward to connecting.
+          </p>
 
-        <p className="text-lg">
-          <span className="font-semibold">Email: </span>
-          <a className="text-brand underline" href="mailto:contact@invibragen.net">
-            contact@invibragen.net
-          </a>
-        </p>
+          <p className="text-lg">
+            <span className="font-semibold">Email: </span>
+            <a className="text-brand underline" href="mailto:contact@invibragen.net">
+              contact@invibragen.net
+            </a>
+          </p>
+        </div>
+
+        <Card className="bg-white/95 lg:justify-self-end">
+          <CardContent className="space-y-3 p-5">
+            <div className="flex min-h-[170px] items-center justify-center rounded-xl border border-dashed border-border/80 bg-gradient-to-br from-white to-brand-mint/45 p-5 text-center text-sm font-medium text-muted-foreground">
+              Team or principal investigator photo placeholder
+            </div>
+            <p className="text-xs text-muted-foreground">
+              Add a real team or individual photo here for trust-building.
+            </p>
+          </CardContent>
+        </Card>
       </section>
 
       <Card className="">
@@ -62,7 +75,7 @@ export function ContactPage() {
 
             <label className="space-y-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground sm:col-span-2">
               Message
-              <Textarea placeholder="Tell us about your workflow, goals, and pilot timeline." required />
+              <Textarea placeholder="Tell us more about your goals." required />
             </label>
 
             <div className="flex flex-col items-start gap-2 sm:col-span-2">

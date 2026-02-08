@@ -50,23 +50,28 @@ export function SiteLayout() {
 
       <footer className="container pb-8 sm:pb-10">
         <div className="section-divider mb-5" />
-        <div className="flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.08em] text-brand-charcoal">
-          <div className="flex flex-wrap items-center gap-6">
-            <Link to="/about" className="hover:text-brand">
-              About
-            </Link>
-            <Link to="/contact" className="hover:text-brand">
-              Contact Us
-            </Link>
+        <div className="space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.08em] text-brand-charcoal">
+            <div className="flex flex-wrap items-center gap-6">
+              <Link to="/about" className="hover:text-brand">
+                About
+              </Link>
+              <Link to="/contact" className="hover:text-brand">
+                Contact Us
+              </Link>
+            </div>
+            <a
+              href="https://www.linkedin.com/company/example"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-brand"
+            >
+              LinkedIn
+            </a>
           </div>
-          <a
-            href="https://www.linkedin.com/company/example"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-brand"
-          >
-            LinkedIn
-          </a>
+          <p className="text-xs text-brand-charcoal/85">
+            Copyright &copy; 2026 Invibragen, Inc. - All Rights Reserved.
+          </p>
         </div>
       </footer>
     </div>
