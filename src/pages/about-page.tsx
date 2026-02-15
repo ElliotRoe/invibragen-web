@@ -124,7 +124,7 @@ export function AboutPage() {
         </Card>
       </section>
 
-      <section className="space-y-5">
+      <section className="space-y-5" id="selected-publications">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="space-y-2">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">Selected Publications</p>
