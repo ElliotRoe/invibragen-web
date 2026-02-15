@@ -190,9 +190,9 @@ function ComparisonChart() {
 
 function HeroChart() {
   return (
-    <div className="space-y-3 lg:self-start">
-      <Card className="overflow-hidden bg-white shadow-[0_10px_28px_-24px_rgba(31,45,60,0.6)]">
-        <CardContent className="aspect-[4/3] p-0">
+    <div className="flex h-full flex-col gap-3 lg:pl-4">
+      <Card className="h-full overflow-hidden bg-white shadow-[0_10px_28px_-24px_rgba(31,45,60,0.6)]">
+        <CardContent className="h-full min-h-[340px] p-0">
           <img
             alt="Spanda plume technology hardware setup"
             className="block h-full w-full object-cover"
@@ -211,18 +211,22 @@ function HeroChart() {
 export function HomePage() {
   return (
     <div className="space-y-12 sm:space-y-16">
-      <section className="grid gap-8 lg:grid-cols-[1fr_0.96fr] lg:items-stretch">
+      <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.84fr)] lg:items-stretch lg:gap-14">
         <div className="space-y-6">
           <span className="inline-flex rounded-full bg-brand-mint px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand-charcoal">
             Built for Research Labs
           </span>
 
-          <h1 className="max-w-2xl font-display text-5xl font-bold leading-[1.08] tracking-[-0.01em] text-brand-charcoal sm:text-6xl lg:text-[4.25rem]">
-            Move Faster.
-            <br />
-            Spend Less.
-            <br />
-            Discover More.
+          <h1 className="max-w-2xl font-display text-5xl font-bold leading-[1.12] tracking-[-0.01em] text-brand-charcoal sm:text-6xl lg:text-[4.25rem] lg:leading-[1.18]">
+            <span className="block">
+              Move <span className="text-brand">Faster.</span>
+            </span>
+            <span className="mt-2 block sm:mt-3">
+              Spend <span className="text-brand">Less.</span>
+            </span>
+            <span className="mt-2 block sm:mt-3">
+              Discover <span className="text-brand">More.</span>
+            </span>
           </h1>
 
           <p className="max-w-xl text-base leading-relaxed text-foreground/90 sm:text-lg">
