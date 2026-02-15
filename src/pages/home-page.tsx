@@ -1,7 +1,10 @@
 import {
+  Award,
   ArrowRight,
+  BookOpenText,
   CircleDollarSign,
   Clock3,
+  FlaskConical,
   Microscope,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -59,14 +62,17 @@ const pillars: Pillar[] = [
 
 const leadershipStats = [
   {
+    icon: Award,
     value: '6',
     label: 'Innovation Awards',
   },
   {
+    icon: FlaskConical,
     value: '5-YR',
     label: 'NSF & NIH-Funded Research Programs',
   },
   {
+    icon: BookOpenText,
     value: '105K+',
     label: 'Scientific Citations',
   },
@@ -229,25 +235,35 @@ export function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand">
               Scientific Leadership
             </p>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               {leadershipStats.map((stat) => (
-                <div key={stat.label} className="space-y-1">
-                  <p className="text-4xl font-semibold leading-none text-brand">{stat.value}</p>
-                  <p className="text-base font-medium leading-tight text-brand-charcoal">{stat.label}</p>
+                <div key={stat.label} className="space-y-1.5 text-center sm:text-left">
+                  <div className="inline-flex rounded-md border border-border/70 bg-brand-mint/50 p-1.5">
+                    <stat.icon className="h-3.5 w-3.5 text-brand" />
+                  </div>
+                  <p className="text-3xl font-semibold leading-none text-brand sm:text-[2rem]">{stat.value}</p>
+                  <p className="text-sm font-medium leading-tight text-brand-charcoal sm:text-[15px]">{stat.label}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
             <Button asChild>
-              <Link to="/contact" className="group">
+              <Link to="/contact" className="group w-full justify-center">
                 Contact Us
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button asChild variant="outline">
-              <Link to="/products-services">Explore Spanda</Link>
+              <Link to="/products-services" className="w-full justify-center">
+                Explore Spanda
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/about#selected-publications" className="w-full justify-center">
+                View Research
+              </Link>
             </Button>
           </div>
         </div>
