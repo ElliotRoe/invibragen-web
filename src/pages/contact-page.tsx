@@ -36,12 +36,38 @@ export function ContactPage() {
 
         <Card className="bg-white/95 lg:justify-self-end">
           <CardContent className="space-y-3 p-5">
-            <div className="flex min-h-[170px] items-center justify-center rounded-xl border border-dashed border-border/80 bg-gradient-to-br from-white to-brand-mint/45 p-5 text-center text-sm font-medium text-muted-foreground">
-              Team or principal investigator photo placeholder
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand">Team</p>
+            <div className="space-y-3">
+              <article className="flex items-center gap-3 rounded-xl border border-border/75 bg-white p-3">
+                <img
+                  alt="Professor Stephen Valentine headshot"
+                  className="h-14 w-14 rounded-lg object-cover"
+                  src="/images/stephen-valentine.jpg"
+                />
+                <div>
+                  <p className="text-sm font-semibold leading-tight text-brand-charcoal">
+                    Professor Stephen Valentine
+                  </p>
+                  <p className="text-xs text-foreground/80">
+                    Expertise: Bioanalytical Chemistry and Instrumentation
+                  </p>
+                </div>
+              </article>
+
+              <article className="flex items-center gap-3 rounded-xl border border-border/75 bg-white p-3">
+                <img
+                  alt="Professor Peng Li headshot"
+                  className="h-14 w-14 rounded-lg object-cover"
+                  src="/images/peng-li.jpg"
+                />
+                <div>
+                  <p className="text-sm font-semibold leading-tight text-brand-charcoal">Professor Peng Li</p>
+                  <p className="text-xs text-foreground/80">
+                    Expertise: Bioanalytical Chemistry and Instrumentation
+                  </p>
+                </div>
+              </article>
             </div>
-            <p className="text-xs text-muted-foreground">
-              Add a real team or individual photo here for trust-building.
-            </p>
           </CardContent>
         </Card>
       </section>

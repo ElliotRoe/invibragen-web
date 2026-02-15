@@ -1,11 +1,8 @@
 import {
   ArrowRight,
-  Beaker,
-  ChartNoAxesCombined,
   CircleDollarSign,
   Clock3,
   Microscope,
-  Sparkles,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -62,19 +59,16 @@ const pillars: Pillar[] = [
 
 const leadershipStats = [
   {
-    value: '105K+',
-    label: 'Scientific Citations',
-    icon: ChartNoAxesCombined,
+    value: '6',
+    label: 'Innovation Awards',
   },
   {
     value: '5-YR',
     label: 'NSF & NIH-Funded Research Programs',
-    icon: Beaker,
   },
   {
-    value: '6',
-    label: 'Peer-Reviewed Innovation Awards',
-    icon: Sparkles,
+    value: '105K+',
+    label: 'Scientific Citations',
   },
 ]
 
@@ -190,8 +184,8 @@ function ComparisonChart() {
 
 function HeroChart() {
   return (
-    <div className="space-y-3 lg:flex lg:h-full lg:flex-col">
-      <Card className="overflow-hidden bg-white shadow-[0_10px_28px_-24px_rgba(31,45,60,0.6)] lg:flex-1">
+    <div className="space-y-3 lg:self-start">
+      <Card className="overflow-hidden bg-white shadow-[0_10px_28px_-24px_rgba(31,45,60,0.6)]">
         <CardContent className="aspect-[4/3] p-0">
           <img
             alt="Spanda plume technology hardware setup"
@@ -231,6 +225,20 @@ export function HomePage() {
             biological insight at a scale that was previously impractical or impossible.
           </p>
 
+          <section className="space-y-3 border-t border-border/70 pt-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand">
+              Scientific Leadership
+            </p>
+            <div className="grid grid-cols-3 gap-4">
+              {leadershipStats.map((stat) => (
+                <div key={stat.label} className="space-y-1">
+                  <p className="text-4xl font-semibold leading-none text-brand">{stat.value}</p>
+                  <p className="text-base font-medium leading-tight text-brand-charcoal">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <div className="flex flex-wrap gap-3">
             <Button asChild>
               <Link to="/contact" className="group">
@@ -248,54 +256,18 @@ export function HomePage() {
       </section>
 
       <section className="space-y-6 sm:space-y-8">
-        <section className="">
-          <div className="section-divider" />
-          <div className="-mx-4 border-b border-border/75 bg-[#e8f6ee] px-4 py-10 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-            <div className="mx-auto max-w-6xl space-y-6">
-              <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#1f5d45]">
-                  Scientific Leadership
-                </p>
-                <h2 className="font-display text-3xl font-bold tracking-tight text-brand-charcoal sm:text-4xl">
-                  Built on rigor, publications, and funded research
-                </h2>
-              </div>
-
-              <div className="overflow-x-auto pb-1">
-                <div className="grid min-w-[760px] grid-cols-3 gap-7 sm:min-w-0 sm:gap-6">
-                  {leadershipStats.map((stat, index) => {
-                    const Icon = stat.icon
-                    return (
-                      <div key={stat.label} className="relative">
-                        {index < leadershipStats.length - 1 ? (
-                          <span className="absolute right-0 top-1 hidden h-16 w-px bg-border/85 sm:block" />
-                        ) : null}
-                        <Icon className="h-4 w-4 text-brand" />
-                        <p className="mt-3 text-4xl font-semibold leading-none text-brand-charcoal">{stat.value}</p>
-                        <p className="mt-2 max-w-[18ch] text-xs font-semibold uppercase tracking-[0.06em] text-brand-charcoal/80">
-                          {stat.label}
-                        </p>
-                      </div>
-                    )
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className="space-y-10 pt-4">
-          <div className="grid gap-10 lg:grid-cols-[0.55fr_0.45fr] lg:items-start lg:gap-12">
+          <div className="space-y-5 text-center">
             <div className="space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">End-to-End Outcomes</p>
               <h3 className="font-display text-4xl font-semibold leading-tight tracking-tight text-brand-charcoal sm:text-5xl">
-                Everything you need to move faster, spend less, and discover more.
+                High-Throughput Without Data Quality Trade-offs
               </h3>
-              <p className="max-w-2xl text-base leading-relaxed text-foreground/90 sm:text-lg">
-                Structured as a practical workflow: accelerate throughput, improve economics, and expand discovery confidence at scale.
+              <p className="mx-auto max-w-2xl text-base leading-relaxed text-foreground/90 sm:text-lg">
+                Conventional workflows force a choice between speed and sensitivity. Invibragen breaks that trade-off.
               </p>
             </div>
-            <div className="space-y-4">
+
+            <div className="mx-auto w-full max-w-5xl space-y-3">
               <ComparisonChart />
               <p className="text-[11px] text-muted-foreground">
                 Illustrative comparison based on peer-reviewed studies and representative workflows.
@@ -309,7 +281,7 @@ export function HomePage() {
               return (
                 <article
                   key={pillar.title}
-                  className={`space-y-5 ${
+                  className={`space-y-5 text-center ${
                     index > 0 ? 'border-t border-border/60 pt-8 md:border-t-0 md:pt-0' : ''
                   } ${
                     index < pillars.length - 1
@@ -317,7 +289,7 @@ export function HomePage() {
                       : ''
                   } ${index > 0 ? 'md:pl-8 lg:pl-10' : ''}`}
                 >
-                  <div className="inline-flex rounded-lg border border-border/80 bg-white p-2.5 shadow-[0_6px_14px_-12px_rgba(31,45,60,0.45)]">
+                  <div className="mx-auto inline-flex rounded-lg border border-border/80 bg-white p-2.5 shadow-[0_6px_14px_-12px_rgba(31,45,60,0.45)]">
                     <Icon className="h-4 w-4 text-[#1f5d45]" />
                   </div>
 
@@ -332,11 +304,17 @@ export function HomePage() {
 
                   <p className="text-sm leading-relaxed text-foreground/90 sm:text-base">{pillar.body}</p>
 
-                  <ul className="list-disc space-y-1 pl-4 text-sm leading-relaxed text-foreground/85">
+                  <ul className="mx-auto inline-block list-disc space-y-1 pl-4 text-left text-sm leading-relaxed text-foreground/85">
                     {pillar.details.map((detail) => (
                       <li key={detail}>{detail}</li>
                     ))}
                   </ul>
+                  <a
+                    className="inline-flex text-sm font-semibold text-brand underline-offset-2 hover:text-brand-charcoal hover:underline"
+                    href={`#published-results-${index + 1}`}
+                  >
+                    View Published Results
+                  </a>
                 </article>
               )
             })}

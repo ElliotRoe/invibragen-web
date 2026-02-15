@@ -84,10 +84,41 @@ export function AboutPage() {
           </div>
         </div>
 
-        <Card>
-          <CardContent>
-            <div className="flex min-h-[320px] items-center justify-center rounded-2xl border border-dashed border-border/80 bg-gradient-to-br from-white to-brand-mint/45 p-8 text-center text-base font-medium text-muted-foreground sm:min-h-[360px]">
-              Team visual placeholder
+        <Card className="bg-white">
+          <CardContent className="space-y-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand">Leadership Team</p>
+            <div className="space-y-4">
+              <article className="flex items-start gap-4 rounded-xl border border-border/80 bg-white p-4">
+                <img
+                  alt="Professor Stephen Valentine headshot"
+                  className="h-20 w-20 rounded-xl object-cover"
+                  src="/images/stephen-valentine.jpg"
+                />
+                <div className="space-y-1">
+                  <p className="font-display text-xl font-semibold leading-tight text-brand-charcoal">
+                    Professor Stephen Valentine
+                  </p>
+                  <p className="text-sm leading-relaxed text-foreground/85">
+                    Expertise: Bioanalytical Chemistry and Instrumentation
+                  </p>
+                </div>
+              </article>
+
+              <article className="flex items-start gap-4 rounded-xl border border-border/80 bg-white p-4">
+                <img
+                  alt="Professor Peng Li headshot"
+                  className="h-20 w-20 rounded-xl object-cover"
+                  src="/images/peng-li.jpg"
+                />
+                <div className="space-y-1">
+                  <p className="font-display text-xl font-semibold leading-tight text-brand-charcoal">
+                    Professor Peng Li
+                  </p>
+                  <p className="text-sm leading-relaxed text-foreground/85">
+                    Expertise: Bioanalytical Chemistry and Instrumentation
+                  </p>
+                </div>
+              </article>
             </div>
           </CardContent>
         </Card>
