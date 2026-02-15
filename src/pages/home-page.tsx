@@ -1,8 +1,11 @@
 import {
   ArrowRight,
+  Beaker,
+  ChartNoAxesCombined,
   CircleDollarSign,
   Clock3,
   Microscope,
+  Sparkles,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -57,41 +60,33 @@ const pillars: Pillar[] = [
   },
 ]
 
-const trustMarks = [
+const leadershipStats = [
   {
-    key: 'nsf',
-    label: 'U.S. National Science Foundation',
-    logoSrc: '/logos/nsf-logo.png',
-    logoAlt: 'NSF Logo',
+    value: '105K+',
+    label: 'Scientific Citations',
+    icon: ChartNoAxesCombined,
   },
   {
-    key: 'nih',
-    label: 'NIH-Funded Awards',
-    placeholderText: 'NIH Logo',
+    value: '5-YR',
+    label: 'NSF & NIH-Funded Research Programs',
+    icon: Beaker,
   },
   {
-    key: 'publications',
-    label: 'Leading Publications',
-    placeholderText: 'Publication Logo',
-  },
-  {
-    key: 'innovation',
+    value: '6',
     label: 'Peer-Reviewed Innovation Awards',
-    placeholderText: 'Award Logo',
+    icon: Sparkles,
   },
 ]
 
 function ComparisonChart() {
   return (
-    <Card className="bg-white shadow-[0_10px_28px_-24px_rgba(31,45,60,0.6)]">
-      <CardContent className="p-3 sm:p-4">
-        <div className="overflow-hidden">
-          <svg
-            aria-label="Throughput and data quality comparison"
-            className="h-auto w-full"
-            role="img"
-            viewBox="0 0 1000 560"
-          >
+    <div className="w-full">
+      <svg
+        aria-label="Throughput and data quality comparison"
+        className="h-auto w-full"
+        role="img"
+        viewBox="0 0 1000 560"
+      >
             <defs>
               <marker
                 id="axis-arrow"
@@ -188,10 +183,8 @@ function ComparisonChart() {
             <text fill="#6d7277" fontSize="16" textAnchor="middle" x="565" y="377">
               Sources
             </text>
-          </svg>
-        </div>
-      </CardContent>
-    </Card>
+      </svg>
+    </div>
   )
 }
 
@@ -255,41 +248,44 @@ export function HomePage() {
       </section>
 
       <section className="space-y-6 sm:space-y-8">
-        <section>
-          <div className="bg-[#e8f6ee] px-4 py-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-6xl space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#1f5d45]">
-                Scientific Leadership
-              </p>
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
-                {trustMarks.map((mark) => (
-                  <article
-                    key={mark.key}
-                    className="flex flex-col items-center text-center"
-                  >
-                    {'logoSrc' in mark ? (
-                      <img
-                        alt={mark.logoAlt}
-                        className="h-16 w-16 shrink-0 object-contain"
-                        src={mark.logoSrc}
-                      />
-                    ) : (
-                      <div className="flex h-14 w-16 shrink-0 items-center justify-center rounded-md bg-white/90 text-[9px] font-semibold uppercase tracking-[0.06em] text-muted-foreground">
-                        {mark.placeholderText}
+        <section className="">
+          <div className="section-divider" />
+          <div className="-mx-4 border-b border-border/75 bg-[#e8f6ee] px-4 py-10 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+            <div className="mx-auto max-w-6xl space-y-6">
+              <div className="space-y-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#1f5d45]">
+                  Scientific Leadership
+                </p>
+                <h2 className="font-display text-3xl font-bold tracking-tight text-brand-charcoal sm:text-4xl">
+                  Built on rigor, publications, and funded research
+                </h2>
+              </div>
+
+              <div className="overflow-x-auto pb-1">
+                <div className="grid min-w-[760px] grid-cols-3 gap-7 sm:min-w-0 sm:gap-6">
+                  {leadershipStats.map((stat, index) => {
+                    const Icon = stat.icon
+                    return (
+                      <div key={stat.label} className="relative">
+                        {index < leadershipStats.length - 1 ? (
+                          <span className="absolute right-0 top-1 hidden h-16 w-px bg-border/85 sm:block" />
+                        ) : null}
+                        <Icon className="h-4 w-4 text-brand" />
+                        <p className="mt-3 text-4xl font-semibold leading-none text-brand-charcoal">{stat.value}</p>
+                        <p className="mt-2 max-w-[18ch] text-xs font-semibold uppercase tracking-[0.06em] text-brand-charcoal/80">
+                          {stat.label}
+                        </p>
                       </div>
-                    )}
-                    <p className="mt-2 text-[10px] font-semibold uppercase leading-tight tracking-[0.06em] text-brand-charcoal">
-                      {mark.label}
-                    </p>
-                  </article>
-                ))}
+                    )
+                  })}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         <section className="space-y-10 pt-4">
-          <div className="grid gap-10 lg:grid-cols-[0.58fr_0.42fr] lg:items-start lg:gap-12">
+          <div className="grid gap-10 lg:grid-cols-[0.55fr_0.45fr] lg:items-start lg:gap-12">
             <div className="space-y-4">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">End-to-End Outcomes</p>
               <h3 className="font-display text-4xl font-semibold leading-tight tracking-tight text-brand-charcoal sm:text-5xl">
@@ -307,7 +303,7 @@ export function HomePage() {
             </div>
           </div>
 
-          <div className="grid gap-8 border-t border-border/70 pt-10 md:grid-cols-3 md:gap-0">
+          <div className="grid gap-8 border-t border-border/70 bg-[#e8f6ee] px-4 pb-8 pt-10 sm:px-6 md:grid-cols-3 md:gap-0 lg:px-8">
             {pillars.map((pillar, index) => {
               const Icon = pillar.icon
               return (
@@ -321,8 +317,8 @@ export function HomePage() {
                       : ''
                   } ${index > 0 ? 'md:pl-8 lg:pl-10' : ''}`}
                 >
-                  <div className="inline-flex rounded-lg bg-brand-mint p-2.5">
-                    <Icon className="h-4 w-4 text-brand-charcoal" />
+                  <div className="inline-flex rounded-lg border border-border/80 bg-white p-2.5 shadow-[0_6px_14px_-12px_rgba(31,45,60,0.45)]">
+                    <Icon className="h-4 w-4 text-[#1f5d45]" />
                   </div>
 
                   <div>
