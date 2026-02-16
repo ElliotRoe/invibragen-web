@@ -69,7 +69,7 @@ const leadershipStats = [
   {
     icon: FlaskConical,
     value: '5-YR',
-    label: 'NSF & NIH-Funded Research Programs',
+    label: 'NSF & NIH-Funded\nResearch Programs',
   },
   {
     icon: BookOpenText,
@@ -195,13 +195,13 @@ function HeroChart() {
         <CardContent className="h-full min-h-[340px] p-0">
           <img
             alt="Spanda plume technology hardware setup"
-            className="block h-full w-full object-cover"
+            className="block h-full w-full object-contain"
             src="/images/spanda-plume-hero.png"
           />
         </CardContent>
       </Card>
 
-      <p className="text-[11px] text-muted-foreground sm:px-1">
+      <p className="text-[10px] text-muted-foreground sm:px-1 sm:whitespace-nowrap">
         Our vibrating sharp-edge spray ionization (VSSI) plume technology powers the Spanda(TM) product line.
       </p>
     </div>
@@ -229,7 +229,7 @@ export function HomePage() {
             </span>
           </h1>
 
-          <p className="max-w-xl text-base leading-relaxed text-foreground/90 sm:text-lg">
+          <p className="max-w-xl text-sm leading-relaxed text-foreground/90 sm:text-base">
             Invibragen helps overcome the trade-offs between speed, cost, and data quality. By making
             large-scale molecular analysis practical and reliable, Invibragen enables labs to unlock new
             biological insight at a scale that was previously impractical or impossible.
