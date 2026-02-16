@@ -1,7 +1,10 @@
 import {
+  Award,
   ArrowRight,
+  BookOpenText,
   CircleDollarSign,
   Clock3,
+  FlaskConical,
   Microscope,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -59,14 +62,17 @@ const pillars: Pillar[] = [
 
 const leadershipStats = [
   {
+    icon: Award,
     value: '6',
     label: 'Innovation Awards',
   },
   {
+    icon: FlaskConical,
     value: '5-YR',
-    label: 'NSF & NIH-Funded Research Programs',
+    label: 'NSF & NIH-Funded\nResearch Programs',
   },
   {
+    icon: BookOpenText,
     value: '105K+',
     label: 'Scientific Citations',
   },
@@ -184,18 +190,18 @@ function ComparisonChart() {
 
 function HeroChart() {
   return (
-    <div className="space-y-3 lg:self-start">
-      <Card className="overflow-hidden bg-white shadow-[0_10px_28px_-24px_rgba(31,45,60,0.6)]">
-        <CardContent className="aspect-[4/3] p-0">
+    <div className="flex h-full flex-col gap-3 lg:max-w-[520px] lg:justify-self-end lg:pl-6">
+      <Card className="h-full overflow-hidden bg-white shadow-[0_10px_28px_-24px_rgba(31,45,60,0.6)]">
+        <CardContent className="h-full min-h-[320px] bg-white p-4">
           <img
             alt="Spanda plume technology hardware setup"
-            className="block h-full w-full object-cover"
+            className="block h-full w-full object-contain"
             src="/images/spanda-plume-hero.png"
           />
         </CardContent>
       </Card>
 
-      <p className="text-[11px] text-muted-foreground sm:px-1">
+      <p className="text-[10px] text-muted-foreground sm:px-1 sm:whitespace-nowrap">
         Our vibrating sharp-edge spray ionization (VSSI) plume technology powers the Spanda(TM) product line.
       </p>
     </div>
@@ -205,21 +211,25 @@ function HeroChart() {
 export function HomePage() {
   return (
     <div className="space-y-12 sm:space-y-16">
-      <section className="grid gap-8 lg:grid-cols-[1fr_0.96fr] lg:items-stretch">
+      <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.74fr)] lg:items-stretch lg:gap-20 xl:gap-24">
         <div className="space-y-6">
           <span className="inline-flex rounded-full bg-brand-mint px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand-charcoal">
             Built for Research Labs
           </span>
 
-          <h1 className="max-w-2xl font-display text-5xl font-bold leading-[1.08] tracking-[-0.01em] text-brand-charcoal sm:text-6xl lg:text-[4.25rem]">
-            Move Faster.
-            <br />
-            Spend Less.
-            <br />
-            Discover More.
+          <h1 className="max-w-2xl font-display text-5xl font-medium leading-[1.08] tracking-[-0.014em] text-brand-charcoal sm:text-[4.05rem] lg:text-[4.6rem] lg:leading-[1.1]">
+            <span className="block">
+              Move <span className="bg-gradient-to-r from-[#1f7f77] via-[#36a79f] to-[#5bbab3] bg-clip-text text-transparent">Faster.</span>
+            </span>
+            <span className="mt-1 block sm:mt-1.5">
+              Spend <span className="bg-gradient-to-r from-[#2a8f7d] via-[#49a890] to-[#6ebca5] bg-clip-text text-transparent">Less.</span>
+            </span>
+            <span className="mt-1 block sm:mt-1.5">
+              Discover <span className="bg-gradient-to-r from-[#248779] via-[#3b9e8d] to-[#63b9ab] bg-clip-text text-transparent">More.</span>
+            </span>
           </h1>
 
-          <p className="max-w-xl text-base leading-relaxed text-foreground/90 sm:text-lg">
+          <p className="max-w-xl text-sm leading-relaxed text-foreground/90 sm:text-base">
             Invibragen helps overcome the trade-offs between speed, cost, and data quality. By making
             large-scale molecular analysis practical and reliable, Invibragen enables labs to unlock new
             biological insight at a scale that was previously impractical or impossible.
@@ -229,25 +239,35 @@ export function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand">
               Scientific Leadership
             </p>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               {leadershipStats.map((stat) => (
-                <div key={stat.label} className="space-y-1">
-                  <p className="text-4xl font-semibold leading-none text-brand">{stat.value}</p>
-                  <p className="text-base font-medium leading-tight text-brand-charcoal">{stat.label}</p>
+                <div key={stat.label} className="space-y-1.5 text-center sm:text-left">
+                  <div className="inline-flex rounded-md border border-border/70 bg-brand-mint/50 p-1.5">
+                    <stat.icon className="h-3.5 w-3.5 text-brand" />
+                  </div>
+                  <p className="text-3xl font-semibold leading-none text-brand sm:text-[2rem]">{stat.value}</p>
+                  <p className="whitespace-pre-line text-xs font-medium leading-tight text-brand-charcoal sm:text-sm">{stat.label}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
             <Button asChild>
-              <Link to="/contact" className="group">
+              <Link to="/contact" className="group w-full justify-center">
                 Contact Us
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button asChild variant="outline">
-              <Link to="/products-services">Explore Spanda</Link>
+              <Link to="/products-services" className="w-full justify-center">
+                Explore Spanda
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/about#selected-publications" className="w-full justify-center">
+                View Research
+              </Link>
             </Button>
           </div>
         </div>
