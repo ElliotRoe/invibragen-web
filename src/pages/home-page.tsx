@@ -122,66 +122,66 @@ function ComparisonChart() {
               y2="500"
             />
 
-            <text fill="#ffffff" fontSize="18" fontWeight="700" textAnchor="middle" x="500" y="34">
+            <text fill="#374151" fontSize="18" fontWeight="700" textAnchor="middle" x="500" y="34">
               High Data Quality
             </text>
-            <text fill="#ffffff" fontSize="14" textAnchor="middle" x="500" y="56">
+            <text fill="#374151" fontSize="14" textAnchor="middle" x="500" y="56">
               Stable, Reproducible Signals
             </text>
 
-            <text fill="#ffffff" fontSize="18" fontWeight="700" textAnchor="middle" x="500" y="536">
+            <text fill="#374151" fontSize="18" fontWeight="700" textAnchor="middle" x="500" y="536">
               Low Data Quality
             </text>
-            <text fill="#ffffff" fontSize="14" textAnchor="middle" x="500" y="558">
+            <text fill="#374151" fontSize="14" textAnchor="middle" x="500" y="558">
               Frequent Signal Loss/Variability
             </text>
 
-            <text fill="#ffffff" fontSize="18" fontWeight="700" textAnchor="middle" x="130" y="272">
+            <text fill="#374151" fontSize="18" fontWeight="700" textAnchor="middle" x="130" y="272">
               Low Throughput
             </text>
-            <text fill="#ffffff" fontSize="14" textAnchor="middle" x="130" y="294">
+            <text fill="#374151" fontSize="14" textAnchor="middle" x="130" y="294">
               10-50 samples
             </text>
-            <text fill="#ffffff" fontSize="14" textAnchor="middle" x="130" y="310">
+            <text fill="#374151" fontSize="14" textAnchor="middle" x="130" y="310">
               per instrument
             </text>
 
-            <text fill="#ffffff" fontSize="18" fontWeight="700" textAnchor="start" x="815" y="272">
+            <text fill="#374151" fontSize="18" fontWeight="700" textAnchor="start" x="815" y="272">
               High Throughput
             </text>
-            <text fill="#ffffff" fontSize="14" textAnchor="start" x="815" y="294">
+            <text fill="#374151" fontSize="14" textAnchor="start" x="815" y="294">
               1-5K samples
             </text>
-            <text fill="#ffffff" fontSize="14" textAnchor="start" x="815" y="310">
+            <text fill="#374151" fontSize="14" textAnchor="start" x="815" y="310">
               per Instrument
             </text>
 
             <circle cx="350" cy="178" fill="#c5edc9" r="16" />
-            <text fill="#ffffff" fontSize="16" textAnchor="middle" x="350" y="232">
+            <text fill="#374151" fontSize="16" textAnchor="middle" x="350" y="232">
               Conventional ESI
             </text>
-            <text fill="#ffffff" fontSize="16" textAnchor="middle" x="350" y="255">
+            <text fill="#374151" fontSize="16" textAnchor="middle" x="350" y="255">
               (Nano-flow)
             </text>
 
             <circle cx="700" cy="186" fill="#4eaea9" r="17" />
-            <text fill="#ffffff" fontSize="18" fontWeight="700" textAnchor="middle" x="700" y="238">
+            <text fill="#374151" fontSize="18" fontWeight="700" textAnchor="middle" x="700" y="238">
               INVIBRAGEN
             </text>
 
             <circle cx="395" cy="380" fill="#7a7e83" r="16" />
-            <text fill="#ffffff" fontSize="16" textAnchor="middle" x="395" y="432">
+            <text fill="#374151" fontSize="16" textAnchor="middle" x="395" y="432">
               Conventional ESI
             </text>
-            <text fill="#ffffff" fontSize="16" textAnchor="middle" x="395" y="455">
+            <text fill="#374151" fontSize="16" textAnchor="middle" x="395" y="455">
               (Micro-flow)
             </text>
 
             <circle cx="565" cy="310" fill="#c5c7ca" r="16" />
-            <text fill="#ffffff" fontSize="16" textAnchor="middle" x="565" y="354">
+            <text fill="#374151" fontSize="16" textAnchor="middle" x="565" y="354">
               Other Spray-Based
             </text>
-            <text fill="#ffffff" fontSize="16" textAnchor="middle" x="565" y="377">
+            <text fill="#374151" fontSize="16" textAnchor="middle" x="565" y="377">
               Sources
             </text>
       </svg>
@@ -191,21 +191,18 @@ function ComparisonChart() {
 
 function HeroChart() {
   return (
-    <div className="flex h-full flex-col gap-3 lg:pl-4">
-      <Card className="h-full overflow-hidden bg-white shadow-[0_10px_28px_-24px_rgba(31,45,60,0.6)]">
+    <div className="flex h-full flex-col gap-0 lg:pl-4">
+      <Card className="h-full overflow-hidden rounded-none border-0 bg-transparent shadow-none">
         <CardContent className="h-full min-h-[340px] p-0">
           <img
             alt="Spanda plume technology hardware setup"
-            className="block h-full w-full object-contain"
+            className="block h-full w-full object-contain lg:translate-x-10"
             src="/images/spanda-plume-hero.png"
           />
-          <p className="px-3 pb-3 text-[9px] leading-relaxed text-muted-foreground">
-            Our vibrating sharp-edge spray ionization (VSSI) plume technology powers the Spanda(TM) product line.
-          </p>
         </CardContent>
       </Card>
 
-      <p className="text-[10px] text-muted-foreground sm:px-1 sm:whitespace-nowrap">
+      <p className="w-full pt-1 text-center text-[10px] text-muted-foreground">
         Our vibrating sharp-edge spray ionization (VSSI) plume technology powers the Spanda(TM) product line.
       </p>
     </div>
@@ -280,21 +277,21 @@ export function HomePage() {
         <HeroChart />
       </section>
 
-      <section className="space-y-6 bg-[linear-gradient(120deg,_#d6dde7_0%,_#c2cbd8_26%,_#a6afbd_52%,_#bcc5d2_74%,_#8a95a6_100%)] sm:space-y-8">
+      <section className="space-y-6 sm:space-y-8">
         <section className="space-y-10 pt-4">
           <div className="space-y-5 text-center">
             <div className="space-y-4">
-              <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+              <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#374151] sm:text-4xl">
                 High-Throughput Without Data Quality Trade-offs
               </h3>
-              <p className="mx-auto max-w-2xl text-base leading-relaxed text-white sm:text-lg">
+              <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#4b5563] sm:text-lg">
                 Conventional workflows force a choice between speed and sensitivity. Invibragen breaks that trade-off.
               </p>
             </div>
 
-            <div className="mx-auto w-full max-w-5xl space-y-3">
+            <div className="mx-auto w-full max-w-5xl space-y-3 rounded-xl border-2 border-[#4eaea9] bg-white/80 p-4 sm:p-5">
               <ComparisonChart />
-              <p className="text-[11px] text-white">
+              <p className="text-[11px] text-[#4b5563]">
                 Illustrative comparison based on peer-reviewed studies and representative workflows.
               </p>
             </div>
