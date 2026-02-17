@@ -122,18 +122,18 @@ function ComparisonChart() {
               y2="500"
             />
 
-            <text fill="#ffffff" fontSize="24" textAnchor="middle" x="500" y="34">
+            <text fill="#ffffff" fontSize="18" fontWeight="700" textAnchor="middle" x="500" y="34">
               High Data Quality
             </text>
-            <text fill="#ffffff" fontSize="18" textAnchor="middle" x="500" y="58">
-              (Stable, Reproducible Signals)
+            <text fill="#ffffff" fontSize="14" textAnchor="middle" x="500" y="56">
+              Stable, Reproducible Signals
             </text>
 
-            <text fill="#ffffff" fontSize="24" textAnchor="middle" x="500" y="536">
+            <text fill="#ffffff" fontSize="18" fontWeight="700" textAnchor="middle" x="500" y="536">
               Low Data Quality
             </text>
-            <text fill="#ffffff" fontSize="18" textAnchor="middle" x="500" y="558">
-              (Frequent Signal Loss/Variability)
+            <text fill="#ffffff" fontSize="14" textAnchor="middle" x="500" y="558">
+              Frequent Signal Loss/Variability
             </text>
 
             <text fill="#ffffff" fontSize="18" fontWeight="700" textAnchor="middle" x="130" y="272">
@@ -146,14 +146,14 @@ function ComparisonChart() {
               per instrument
             </text>
 
-            <text fill="#ffffff" fontSize="24" textAnchor="middle" x="790" y="338">
+            <text fill="#ffffff" fontSize="18" fontWeight="700" textAnchor="start" x="815" y="272">
               High Throughput
             </text>
-            <text fill="#ffffff" fontSize="20" textAnchor="middle" x="790" y="368">
-              (1-5K Samples per
+            <text fill="#ffffff" fontSize="14" textAnchor="start" x="815" y="294">
+              1-5K samples
             </text>
-            <text fill="#ffffff" fontSize="20" textAnchor="middle" x="790" y="394">
-              Instrument)
+            <text fill="#ffffff" fontSize="14" textAnchor="start" x="815" y="310">
+              per Instrument
             </text>
 
             <circle cx="350" cy="178" fill="#c5edc9" r="16" />
@@ -221,14 +221,14 @@ export function HomePage() {
             Built for Research Labs
           </span>
 
-          <h1 className="max-w-2xl font-display text-5xl font-semibold leading-[1.14] tracking-[-0.012em] text-brand-charcoal sm:text-[4.15rem] lg:text-[4.7rem] lg:leading-[1.22]">
+          <h1 className="max-w-2xl font-display text-5xl font-semibold leading-[1.1] tracking-[-0.012em] text-brand-charcoal sm:text-[4.15rem] lg:text-[4.7rem] lg:leading-[1.14]">
             <span className="block">
               Move <span className="bg-gradient-to-r from-[#1f7f77] via-[#36a79f] to-[#5bbab3] bg-clip-text text-transparent">Faster.</span>
             </span>
-            <span className="mt-3 block sm:mt-4">
+            <span className="mt-2 block sm:mt-3">
               Spend <span className="bg-gradient-to-r from-[#2a8f7d] via-[#49a890] to-[#6ebca5] bg-clip-text text-transparent">Less.</span>
             </span>
-            <span className="mt-3 block sm:mt-4">
+            <span className="mt-2 block sm:mt-3">
               Discover <span className="bg-gradient-to-r from-[#248779] via-[#3b9e8d] to-[#63b9ab] bg-clip-text text-transparent">More.</span>
             </span>
           </h1>
