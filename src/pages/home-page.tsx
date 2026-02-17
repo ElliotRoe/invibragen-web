@@ -215,13 +215,13 @@ function HeroChart() {
 export function HomePage() {
   return (
     <div className="space-y-12 sm:space-y-16">
-      <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.84fr)] lg:items-stretch lg:gap-14">
-        <div className="space-y-6">
+      <section className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,0.84fr)] lg:items-stretch lg:gap-24">
+        <div className="max-w-[39rem] space-y-6">
           <span className="inline-flex rounded-full bg-brand-mint px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand-charcoal">
             Built for Research Labs
           </span>
 
-          <h1 className="max-w-2xl font-display text-5xl font-semibold leading-[1.1] tracking-[-0.012em] text-brand-charcoal sm:text-[4.15rem] lg:text-[4.7rem] lg:leading-[1.14]">
+          <h1 className="max-w-[37rem] font-display text-5xl font-semibold leading-[1.1] tracking-[-0.012em] text-brand-charcoal sm:text-[4.15rem] lg:text-[4.7rem] lg:leading-[1.14]">
             <span className="block">
               Move <span className="bg-gradient-to-r from-[#1f7f77] via-[#36a79f] to-[#5bbab3] bg-clip-text text-transparent">Faster.</span>
             </span>
@@ -233,7 +233,7 @@ export function HomePage() {
             </span>
           </h1>
 
-          <p className="max-w-xl text-sm leading-relaxed text-foreground/90 sm:text-base">
+          <p className="max-w-lg text-sm font-light leading-relaxed text-foreground/80 sm:text-base">
             Invibragen partners with research labs to overcome the trade-offs between speed, cost, and
             data quality. By making large-scale molecular analysis practical and reliable, Invibragen
             enables labs to unlock new biological insight at a scale that was previously impractical or
@@ -280,7 +280,7 @@ export function HomePage() {
         <HeroChart />
       </section>
 
-      <section className="space-y-6 bg-[radial-gradient(circle_at_center,_#2f4c78_0%,_#1f3559_55%,_#132949_100%)] sm:space-y-8">
+      <section className="space-y-6 bg-[linear-gradient(120deg,_#d6dde7_0%,_#c2cbd8_26%,_#a6afbd_52%,_#bcc5d2_74%,_#8a95a6_100%)] sm:space-y-8">
         <section className="space-y-10 pt-4">
           <div className="space-y-5 text-center">
             <div className="space-y-4">
