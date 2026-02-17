@@ -234,9 +234,10 @@ export function HomePage() {
           </h1>
 
           <p className="max-w-xl text-sm leading-relaxed text-foreground/90 sm:text-base">
-            Invibragen helps overcome the trade-offs between speed, cost, and data quality. By making
-            large-scale molecular analysis practical and reliable, Invibragen enables labs to unlock new
-            biological insight at a scale that was previously impractical or impossible.
+            Invibragen partners with research labs to overcome the trade-offs between speed, cost, and
+            data quality. By making large-scale molecular analysis practical and reliable, Invibragen
+            enables labs to unlock new biological insight at a scale that was previously impractical or
+            impossible.
           </p>
 
           <section className="space-y-3 border-t border-border/70 pt-4">
@@ -250,7 +251,7 @@ export function HomePage() {
                     <stat.icon className="h-3.5 w-3.5 text-brand" />
                   </div>
                   <p className="text-3xl font-semibold leading-none text-brand sm:text-[2rem]">{stat.value}</p>
-                  <p className="text-sm font-medium leading-tight text-brand-charcoal sm:text-[15px]">{stat.label}</p>
+                  <p className="whitespace-pre-line text-[11px] font-light leading-tight text-brand-charcoal/80 sm:text-xs">{stat.label}</p>
                 </div>
               ))}
             </div>
