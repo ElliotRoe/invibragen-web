@@ -1,5 +1,19 @@
 # React + TypeScript + Vite
 
+## Website preview
+
+Latest captured homepage preview:
+
+![Invibragen website homepage preview](docs/render/website-preview-home.png)
+
+To regenerate a local preview image:
+
+1. Start the development server:
+   ```bash
+   npm run dev -- --host 0.0.0.0 --port 4173
+   ```
+2. Capture a screenshot (for example with Playwright) and save it to `docs/render/website-preview-home.png`.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
