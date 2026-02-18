@@ -118,8 +118,8 @@ function ComparisonChart() {
               strokeWidth="3"
               x1="500"
               x2="500"
-              y1="110"
-              y2="480"
+              y1="90"
+              y2="500"
             />
 
             <text fill="#2f343a" fontSize="18" fontWeight="700" textAnchor="middle" x="500" y="34">
@@ -136,23 +136,23 @@ function ComparisonChart() {
               Frequent Signal Loss/Variability
             </text>
 
-            <text fill="#2f343a" fontSize="18" fontWeight="700" textAnchor="middle" x="130" y="272">
+            <text fill="#2f343a" fontSize="18" fontWeight="700" textAnchor="middle" x="150" y="272">
               Low Throughput
             </text>
-            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="130" y="294">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="150" y="294">
               10-50 samples
             </text>
-            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="130" y="310">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="150" y="310">
               per instrument
             </text>
 
-            <text fill="#2f343a" fontSize="18" fontWeight="700" textAnchor="middle" x="885" y="272">
+            <text fill="#2f343a" fontSize="18" fontWeight="700" textAnchor="middle" x="855" y="272">
               High Throughput
             </text>
-            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="885" y="294">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="855" y="294">
               1-5K samples
             </text>
-            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="885" y="310">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="855" y="310">
               per Instrument
             </text>
 
