@@ -164,7 +164,7 @@ function ComparisonChart() {
               (Nano-flow)
             </text>
 
-            <circle cx="700" cy="186" fill="#4eaea9" r="12" />
+            <circle cx="700" cy="186" fill="#b8ff2e" r="12" />
             <text fill="#6ec4bf" fontSize="16" fontWeight="700" textAnchor="middle" x="700" y="230">
               INVIBRAGEN
             </text>
@@ -216,13 +216,13 @@ export function HomePage() {
 
           <h1 className="max-w-[37rem] font-display text-5xl font-semibold leading-[1.1] tracking-[-0.012em] text-brand-charcoal sm:text-[4.15rem] lg:text-[4.7rem] lg:leading-[1.14]">
             <span className="block">
-              Move <span className="bg-gradient-to-r from-[#1f7a52] via-[#2f8e63] to-[#58ad82] bg-clip-text text-transparent">Faster.</span>
+              <span className="text-[#3f3f46]">Move</span> <span className="bg-gradient-to-r from-[#1f7a52] via-[#2f8e63] to-[#58ad82] bg-clip-text text-transparent">Faster.</span>
             </span>
             <span className="mt-2 block sm:mt-3">
-              Spend <span className="bg-gradient-to-r from-[#1f7f56] via-[#349568] to-[#63b58a] bg-clip-text text-transparent">Less.</span>
+              <span className="text-[#3f3f46]">Spend</span> <span className="bg-gradient-to-r from-[#1f7f56] via-[#349568] to-[#63b58a] bg-clip-text text-transparent">Less.</span>
             </span>
             <span className="mt-2 block sm:mt-3">
-              Discover <span className="bg-gradient-to-r from-[#1e7b54] via-[#2f9165] to-[#5aae84] bg-clip-text text-transparent">More.</span>
+              <span className="text-[#3f3f46]">Discover</span> <span className="bg-gradient-to-r from-[#1e7b54] via-[#2f9165] to-[#5aae84] bg-clip-text text-transparent">More.</span>
             </span>
           </h1>
 
@@ -278,13 +278,13 @@ export function HomePage() {
 
       <section className="space-y-6 sm:space-y-8">
         <section className="space-y-10 pt-4">
-          <div className="mx-auto w-full max-w-5xl rounded-xl bg-gradient-to-br from-[#4a4f57] via-[#30353d] to-[#5b616a] p-[4px] shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_10px_20px_-16px_rgba(37,41,47,0.55)]">
+          <div className="mx-auto w-full max-w-5xl rounded-xl bg-gradient-to-br from-[#0f3f2f] via-[#1f6f4f] to-[#4ea37b] p-[4px] shadow-[inset_0_1px_0_rgba(255,255,255,0.3),0_12px_24px_-16px_rgba(15,63,47,0.45)]">
             <div className="space-y-5 rounded-[10px] bg-white p-4 text-center sm:p-5">
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#2f8e63] sm:text-4xl">
                   High-Throughput Without Data Quality Trade-offs
                 </h3>
-                <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#1f6f6a] sm:text-lg">
+                <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#3a9b71] sm:text-lg">
                   Conventional workflows force a choice between speed and sensitivity.
                   <br />
                   Invibragen breaks that trade-off.
