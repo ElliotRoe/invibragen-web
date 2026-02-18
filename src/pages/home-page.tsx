@@ -164,7 +164,7 @@ function ComparisonChart() {
               (Nano-flow)
             </text>
 
-            <circle cx="700" cy="186" fill="#52c48b" r="12" />
+            <circle cx="700" cy="186" fill="#FFDF00" r="12" />
             <text fill="#52c48b" fontSize="16" fontWeight="700" textAnchor="middle" x="700" y="230">
               INVIBRAGEN
             </text>
@@ -287,7 +287,7 @@ export function HomePage() {
                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#3a9b71] sm:text-lg">
                   Conventional workflows force a choice between speed and sensitivity.
                   <br />
-                  <span className="text-[#52c48b]">Invibragen breaks that trade-off.</span>
+                  <span className="text-[#FFDF00]">Invibragen breaks that trade-off.</span>
                 </p>
               </div>
 
