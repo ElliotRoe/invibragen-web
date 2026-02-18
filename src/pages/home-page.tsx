@@ -122,66 +122,66 @@ function ComparisonChart() {
               y2="500"
             />
 
-            <text fill="#374151" fontSize="18" fontWeight="700" textAnchor="middle" x="500" y="34">
+            <text fill="#2f343a" fontSize="18" fontWeight="700" textAnchor="middle" x="500" y="34">
               High Data Quality
             </text>
-            <text fill="#374151" fontSize="14" textAnchor="middle" x="500" y="56">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="500" y="56">
               Stable, Reproducible Signals
             </text>
 
-            <text fill="#374151" fontSize="18" fontWeight="700" textAnchor="middle" x="500" y="536">
+            <text fill="#2f343a" fontSize="18" fontWeight="700" textAnchor="middle" x="500" y="536">
               Low Data Quality
             </text>
-            <text fill="#374151" fontSize="14" textAnchor="middle" x="500" y="558">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="500" y="558">
               Frequent Signal Loss/Variability
             </text>
 
-            <text fill="#374151" fontSize="18" fontWeight="700" textAnchor="middle" x="130" y="272">
+            <text fill="#2f343a" fontSize="18" fontWeight="700" textAnchor="middle" x="130" y="272">
               Low Throughput
             </text>
-            <text fill="#374151" fontSize="14" textAnchor="middle" x="130" y="294">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="130" y="294">
               10-50 samples
             </text>
-            <text fill="#374151" fontSize="14" textAnchor="middle" x="130" y="310">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="130" y="310">
               per instrument
             </text>
 
-            <text fill="#374151" fontSize="18" fontWeight="700" textAnchor="middle" x="885" y="272">
+            <text fill="#2f343a" fontSize="18" fontWeight="700" textAnchor="middle" x="885" y="272">
               High Throughput
             </text>
-            <text fill="#374151" fontSize="14" textAnchor="middle" x="885" y="294">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="885" y="294">
               1-5K samples
             </text>
-            <text fill="#374151" fontSize="14" textAnchor="middle" x="885" y="310">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="885" y="310">
               per Instrument
             </text>
 
-            <circle cx="350" cy="178" fill="#c5edc9" r="16" />
-            <text fill="#374151" fontSize="14" textAnchor="middle" x="350" y="224">
+            <circle cx="350" cy="178" fill="#c5edc9" r="15" />
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="350" y="216">
               Conventional ESI
             </text>
-            <text fill="#374151" fontSize="14" textAnchor="middle" x="350" y="243">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="350" y="235">
               (Nano-flow)
             </text>
 
-            <circle cx="700" cy="186" fill="#4eaea9" r="17" />
+            <circle cx="700" cy="186" fill="#4eaea9" r="16" />
             <text fill="#6ec4bf" fontSize="16" fontWeight="700" textAnchor="middle" x="700" y="230">
               INVIBRAGEN
             </text>
 
-            <circle cx="395" cy="380" fill="#7a7e83" r="16" />
-            <text fill="#374151" fontSize="14" textAnchor="middle" x="395" y="424">
+            <circle cx="395" cy="380" fill="#7a7e83" r="15" />
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="395" y="416">
               Conventional ESI
             </text>
-            <text fill="#374151" fontSize="14" textAnchor="middle" x="395" y="443">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="395" y="435">
               (Micro-flow)
             </text>
 
-            <circle cx="565" cy="310" fill="#c5c7ca" r="16" />
-            <text fill="#374151" fontSize="14" textAnchor="middle" x="565" y="346">
+            <circle cx="565" cy="310" fill="#c5c7ca" r="15" />
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="565" y="346">
               Other Spray-Based
             </text>
-            <text fill="#374151" fontSize="14" textAnchor="middle" x="565" y="365">
+            <text fill="#6b7280" fontSize="14" textAnchor="middle" x="565" y="365">
               Sources
             </text>
       </svg>
@@ -279,7 +279,7 @@ export function HomePage() {
 
       <section className="space-y-6 sm:space-y-8">
         <section className="space-y-10 pt-4">
-          <div className="mx-auto w-full max-w-5xl rounded-xl bg-gradient-to-br from-[#7fd0ca] via-[#4eaea9] to-[#98ddd7] p-[2px] shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_18px_-16px_rgba(78,174,169,0.55)]">
+          <div className="mx-auto w-full max-w-5xl rounded-xl bg-gradient-to-br from-[#7fd0ca] via-[#4eaea9] to-[#98ddd7] p-[4px] shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_18px_-16px_rgba(78,174,169,0.55)]">
             <div className="space-y-5 rounded-[10px] bg-white p-4 text-center sm:p-5">
               <div className="space-y-4">
                 <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#4eaea9] sm:text-4xl">
