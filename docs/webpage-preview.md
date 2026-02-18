@@ -1,6 +1,6 @@
 # Webpage Preview
 
-A fresh homepage preview was captured via Playwright and shared in the task response as `webpage-preview.png`.
+A fresh homepage preview was captured via Playwright on 2026-02-18 and shared in the task response as `webpage-preview-2026-02-18.png`.
 
 ## Regenerate locally
 

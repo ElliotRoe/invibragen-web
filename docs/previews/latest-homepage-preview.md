@@ -1,5 +1,5 @@
 # Latest Homepage Preview
 
-Captured with Playwright against the local Vite dev server (`http://localhost:4173`).
+Captured with Playwright against the local Vite dev server (`http://localhost:4173`) on 2026-02-18.
 
-![Homepage preview](browser:/tmp/codex_browser_invocations/1c5ce357a312b296/artifacts/artifacts/webpage-preview.png)
+![Homepage preview](browser:/tmp/codex_browser_invocations/a78357577c7d008f/artifacts/artifacts/webpage-preview-2026-02-18.png)
