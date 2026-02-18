@@ -156,7 +156,7 @@ function ComparisonChart() {
               per Instrument
             </text>
 
-            <circle cx="350" cy="178" fill="#c5edc9" r="15" />
+            <circle cx="350" cy="178" fill="#c5edc9" r="12" />
             <text fill="#6b7280" fontSize="14" textAnchor="middle" x="350" y="216">
               Conventional ESI
             </text>
@@ -164,12 +164,12 @@ function ComparisonChart() {
               (Nano-flow)
             </text>
 
-            <circle cx="700" cy="186" fill="#4eaea9" r="16" />
+            <circle cx="700" cy="186" fill="#4eaea9" r="13" />
             <text fill="#6ec4bf" fontSize="16" fontWeight="700" textAnchor="middle" x="700" y="230">
               INVIBRAGEN
             </text>
 
-            <circle cx="395" cy="380" fill="#7a7e83" r="15" />
+            <circle cx="395" cy="380" fill="#7a7e83" r="12" />
             <text fill="#6b7280" fontSize="14" textAnchor="middle" x="395" y="416">
               Conventional ESI
             </text>
@@ -177,7 +177,7 @@ function ComparisonChart() {
               (Micro-flow)
             </text>
 
-            <circle cx="565" cy="310" fill="#c5c7ca" r="15" />
+            <circle cx="565" cy="310" fill="#c5c7ca" r="12" />
             <text fill="#6b7280" fontSize="14" textAnchor="middle" x="565" y="346">
               Other Spray-Based
             </text>
@@ -194,17 +194,13 @@ function HeroChart() {
     <div className="flex h-full flex-col gap-0 lg:pl-4">
       <Card className="h-full overflow-hidden rounded-none border-0 bg-transparent shadow-none">
         <CardContent className="h-full min-h-[340px] p-0">
-          <img
-            alt="Spanda plume technology hardware setup"
-            className="block h-full w-full object-contain lg:translate-x-10"
-            src="/images/spanda-plume-hero.png"
+          <div
+            aria-hidden="true"
+            className="h-full w-full lg:translate-x-10"
           />
         </CardContent>
       </Card>
 
-      <p className="w-full pt-1 text-center text-[10px] text-muted-foreground">
-        Our vibrating sharp-edge spray ionization (VSSI) plume technology powers the Spanda(TM) product line.
-      </p>
     </div>
   )
 }
@@ -282,7 +278,7 @@ export function HomePage() {
           <div className="mx-auto w-full max-w-5xl rounded-xl bg-gradient-to-br from-[#7fd0ca] via-[#4eaea9] to-[#98ddd7] p-[4px] shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_18px_-16px_rgba(78,174,169,0.55)]">
             <div className="space-y-5 rounded-[10px] bg-white p-4 text-center sm:p-5">
               <div className="space-y-4">
-                <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#4eaea9] sm:text-4xl">
+                <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#1f6f6a] sm:text-4xl">
                   High-Throughput Without Data Quality Trade-offs
                 </h3>
                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#5bb8b2] sm:text-lg">
@@ -293,9 +289,6 @@ export function HomePage() {
               </div>
 
               <ComparisonChart />
-              <p className="text-[11px] text-[#4b5563]">
-                Illustrative comparison based on peer-reviewed studies and representative workflows.
-              </p>
             </div>
           </div>
 
