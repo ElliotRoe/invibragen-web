@@ -1,6 +1,10 @@
 # Webpage Preview
 
-A fresh homepage preview was captured via Playwright on 2026-02-18 and shared in the task response as `webpage-preview-2026-02-18.png`.
+A fresh homepage preview was captured via Playwright on 2026-02-18 and is available as `webpage-preview-2026-02-18.png`.
+
+Preview artifact:
+
+- `browser:/tmp/codex_browser_invocations/8ec4f14fbf1a5cc8/artifacts/artifacts/webpage-preview-2026-02-18.png`
 
 ## Regenerate locally
 
