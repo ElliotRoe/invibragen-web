@@ -105,7 +105,7 @@ function ComparisonChart() {
               markerEnd="url(#axis-arrow)"
               markerStart="url(#axis-arrow)"
               stroke="#b8bcc2"
-              strokeWidth="1.5"
+              strokeWidth="2"
               x1="210"
               x2="790"
               y1="285"
@@ -115,7 +115,7 @@ function ComparisonChart() {
               markerEnd="url(#axis-arrow)"
               markerStart="url(#axis-arrow)"
               stroke="#b8bcc2"
-              strokeWidth="1.5"
+              strokeWidth="2"
               x1="500"
               x2="500"
               y1="90"
@@ -146,42 +146,42 @@ function ComparisonChart() {
               per instrument
             </text>
 
-            <text fill="#374151" fontSize="18" fontWeight="700" textAnchor="start" x="815" y="272">
+            <text fill="#374151" fontSize="18" fontWeight="700" textAnchor="middle" x="885" y="272">
               High Throughput
             </text>
-            <text fill="#374151" fontSize="14" textAnchor="start" x="815" y="294">
+            <text fill="#374151" fontSize="14" textAnchor="middle" x="885" y="294">
               1-5K samples
             </text>
-            <text fill="#374151" fontSize="14" textAnchor="start" x="815" y="310">
+            <text fill="#374151" fontSize="14" textAnchor="middle" x="885" y="310">
               per Instrument
             </text>
 
             <circle cx="350" cy="178" fill="#c5edc9" r="16" />
-            <text fill="#374151" fontSize="16" textAnchor="middle" x="350" y="232">
+            <text fill="#374151" fontSize="14" textAnchor="middle" x="350" y="224">
               Conventional ESI
             </text>
-            <text fill="#374151" fontSize="16" textAnchor="middle" x="350" y="255">
+            <text fill="#374151" fontSize="14" textAnchor="middle" x="350" y="243">
               (Nano-flow)
             </text>
 
             <circle cx="700" cy="186" fill="#4eaea9" r="17" />
-            <text fill="#374151" fontSize="18" fontWeight="700" textAnchor="middle" x="700" y="238">
+            <text fill="#6ec4bf" fontSize="16" fontWeight="700" textAnchor="middle" x="700" y="230">
               INVIBRAGEN
             </text>
 
             <circle cx="395" cy="380" fill="#7a7e83" r="16" />
-            <text fill="#374151" fontSize="16" textAnchor="middle" x="395" y="432">
+            <text fill="#374151" fontSize="14" textAnchor="middle" x="395" y="424">
               Conventional ESI
             </text>
-            <text fill="#374151" fontSize="16" textAnchor="middle" x="395" y="455">
+            <text fill="#374151" fontSize="14" textAnchor="middle" x="395" y="443">
               (Micro-flow)
             </text>
 
             <circle cx="565" cy="310" fill="#c5c7ca" r="16" />
-            <text fill="#374151" fontSize="16" textAnchor="middle" x="565" y="354">
+            <text fill="#374151" fontSize="14" textAnchor="middle" x="565" y="346">
               Other Spray-Based
             </text>
-            <text fill="#374151" fontSize="16" textAnchor="middle" x="565" y="377">
+            <text fill="#374151" fontSize="14" textAnchor="middle" x="565" y="365">
               Sources
             </text>
       </svg>
@@ -279,17 +279,19 @@ export function HomePage() {
 
       <section className="space-y-6 sm:space-y-8">
         <section className="space-y-10 pt-4">
-          <div className="space-y-5 text-center">
-            <div className="space-y-4">
-              <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#374151] sm:text-4xl">
-                High-Throughput Without Data Quality Trade-offs
-              </h3>
-              <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#4b5563] sm:text-lg">
-                Conventional workflows force a choice between speed and sensitivity. Invibragen breaks that trade-off.
-              </p>
-            </div>
+          <div className="mx-auto w-full max-w-5xl rounded-xl bg-gradient-to-br from-[#7fd0ca] via-[#4eaea9] to-[#98ddd7] p-[2px] shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_18px_-16px_rgba(78,174,169,0.55)]">
+            <div className="space-y-5 rounded-[10px] bg-white p-4 text-center sm:p-5">
+              <div className="space-y-4">
+                <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#4eaea9] sm:text-4xl">
+                  High-Throughput Without Data Quality Trade-offs
+                </h3>
+                <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#5bb8b2] sm:text-lg">
+                  Conventional workflows force a choice between speed and sensitivity.
+                  <br />
+                  Invibragen breaks that trade-off.
+                </p>
+              </div>
 
-            <div className="mx-auto w-full max-w-5xl space-y-3 rounded-xl border-2 border-[#4eaea9] bg-white/80 p-4 sm:p-5">
               <ComparisonChart />
               <p className="text-[11px] text-[#4b5563]">
                 Illustrative comparison based on peer-reviewed studies and representative workflows.
