@@ -105,9 +105,9 @@ function ComparisonChart() {
               markerEnd="url(#axis-arrow)"
               markerStart="url(#axis-arrow)"
               stroke="#b8bcc2"
-              strokeWidth="2"
-              x1="210"
-              x2="790"
+              strokeWidth="3"
+              x1="245"
+              x2="755"
               y1="285"
               y2="285"
             />
@@ -115,11 +115,11 @@ function ComparisonChart() {
               markerEnd="url(#axis-arrow)"
               markerStart="url(#axis-arrow)"
               stroke="#b8bcc2"
-              strokeWidth="2"
+              strokeWidth="3"
               x1="500"
               x2="500"
-              y1="90"
-              y2="500"
+              y1="110"
+              y2="480"
             />
 
             <text fill="#2f343a" fontSize="18" fontWeight="700" textAnchor="middle" x="500" y="34">
@@ -216,13 +216,13 @@ export function HomePage() {
 
           <h1 className="max-w-[37rem] font-display text-5xl font-semibold leading-[1.1] tracking-[-0.012em] text-brand-charcoal sm:text-[4.15rem] lg:text-[4.7rem] lg:leading-[1.14]">
             <span className="block">
-              <span className="text-[#3f3f46]">Move</span> <span className="bg-gradient-to-r from-[#1f7a52] via-[#2f8e63] to-[#58ad82] bg-clip-text text-transparent">Faster.</span>
+              <span className="text-[#52525b]">Move</span> <span className="bg-gradient-to-r from-[#1f7a52] via-[#2f8e63] to-[#58ad82] bg-clip-text text-transparent">Faster.</span>
             </span>
             <span className="mt-2 block sm:mt-3">
-              <span className="text-[#3f3f46]">Spend</span> <span className="bg-gradient-to-r from-[#1f7f56] via-[#349568] to-[#63b58a] bg-clip-text text-transparent">Less.</span>
+              <span className="text-[#52525b]">Spend</span> <span className="bg-gradient-to-r from-[#1f7f56] via-[#349568] to-[#63b58a] bg-clip-text text-transparent">Less.</span>
             </span>
             <span className="mt-2 block sm:mt-3">
-              <span className="text-[#3f3f46]">Discover</span> <span className="bg-gradient-to-r from-[#1e7b54] via-[#2f9165] to-[#5aae84] bg-clip-text text-transparent">More.</span>
+              <span className="text-[#52525b]">Discover</span> <span className="bg-gradient-to-r from-[#1e7b54] via-[#2f9165] to-[#5aae84] bg-clip-text text-transparent">More.</span>
             </span>
           </h1>
 

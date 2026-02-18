@@ -1,6 +1,6 @@
 # Webpage Preview
 
-Latest generated preview is shared in the task response as an artifact screenshot.
+A fresh homepage preview was captured via Playwright and shared in the task response as `webpage-preview.png`.
 
 ## Regenerate locally
 
