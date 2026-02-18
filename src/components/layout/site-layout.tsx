@@ -32,7 +32,7 @@ export function SiteLayout() {
                   cn(
                     'rounded-md border border-border/85 bg-white/82 px-3 py-2 text-xs font-semibold uppercase tracking-[0.08em] transition-colors',
                     isActive
-                      ? 'border-brand/70 bg-brand-mint/55 text-brand-charcoal'
+                      ? 'border-[#184f3d]/35 bg-[#184f3d] text-white shadow-[0_4px_12px_-9px_rgba(24,79,61,0.85)]'
                       : 'text-foreground hover:bg-white',
                   )
                 }

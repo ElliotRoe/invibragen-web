@@ -164,7 +164,7 @@ function ComparisonChart() {
               (Nano-flow)
             </text>
 
-            <circle cx="700" cy="186" fill="#4eaea9" r="13" />
+            <circle cx="700" cy="186" fill="#4eaea9" r="12" />
             <text fill="#6ec4bf" fontSize="16" fontWeight="700" textAnchor="middle" x="700" y="230">
               INVIBRAGEN
             </text>
@@ -210,19 +210,19 @@ export function HomePage() {
     <div className="space-y-12 sm:space-y-16">
       <section className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,0.84fr)] lg:items-stretch lg:gap-24">
         <div className="max-w-[39rem] space-y-6">
-          <span className="inline-flex rounded-full bg-brand-mint px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand-charcoal">
+          <span className="inline-flex items-center rounded-full border border-[#c7d2cc] bg-white px-6 py-2 text-sm font-semibold tracking-[0.01em] text-[#0f5b44] shadow-[0_2px_8px_rgba(23,44,37,0.14)]">
             Built for Research Labs
           </span>
 
           <h1 className="max-w-[37rem] font-display text-5xl font-semibold leading-[1.1] tracking-[-0.012em] text-brand-charcoal sm:text-[4.15rem] lg:text-[4.7rem] lg:leading-[1.14]">
             <span className="block">
-              Move <span className="bg-gradient-to-r from-[#1f7f77] via-[#36a79f] to-[#5bbab3] bg-clip-text text-transparent">Faster.</span>
+              Move <span className="bg-gradient-to-r from-[#1f7a52] via-[#2f8e63] to-[#58ad82] bg-clip-text text-transparent">Faster.</span>
             </span>
             <span className="mt-2 block sm:mt-3">
-              Spend <span className="bg-gradient-to-r from-[#2a8f7d] via-[#49a890] to-[#6ebca5] bg-clip-text text-transparent">Less.</span>
+              Spend <span className="bg-gradient-to-r from-[#1f7f56] via-[#349568] to-[#63b58a] bg-clip-text text-transparent">Less.</span>
             </span>
             <span className="mt-2 block sm:mt-3">
-              Discover <span className="bg-gradient-to-r from-[#248779] via-[#3b9e8d] to-[#63b9ab] bg-clip-text text-transparent">More.</span>
+              Discover <span className="bg-gradient-to-r from-[#1e7b54] via-[#2f9165] to-[#5aae84] bg-clip-text text-transparent">More.</span>
             </span>
           </h1>
 
@@ -234,16 +234,16 @@ export function HomePage() {
           </p>
 
           <section className="space-y-3 border-t border-border/70 pt-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand">
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#2f7a54]">
               Scientific Leadership
             </p>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               {leadershipStats.map((stat) => (
                 <div key={stat.label} className="space-y-1.5 text-center sm:text-left">
                   <div className="inline-flex rounded-md border border-border/70 bg-brand-mint/50 p-1.5">
-                    <stat.icon className="h-3.5 w-3.5 text-brand" />
+                    <stat.icon className="h-3.5 w-3.5 text-[#2f7a54]" />
                   </div>
-                  <p className="text-3xl font-semibold leading-none text-brand sm:text-[2rem]">{stat.value}</p>
+                  <p className="text-3xl font-semibold leading-none text-[#2f7a54] sm:text-[2rem]">{stat.value}</p>
                   <p className="whitespace-pre-line text-[11px] font-light leading-tight text-brand-charcoal/80 sm:text-xs">{stat.label}</p>
                 </div>
               ))}
@@ -251,7 +251,10 @@ export function HomePage() {
           </section>
 
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-            <Button asChild>
+            <Button
+              asChild
+              className="border-[#184f3d]/30 bg-[#184f3d] shadow-[0_4px_12px_-9px_rgba(24,79,61,0.85)] hover:bg-[#144333]"
+            >
               <Link to="/contact" className="group w-full justify-center">
                 Contact Us
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -275,13 +278,13 @@ export function HomePage() {
 
       <section className="space-y-6 sm:space-y-8">
         <section className="space-y-10 pt-4">
-          <div className="mx-auto w-full max-w-5xl rounded-xl bg-gradient-to-br from-[#7fd0ca] via-[#4eaea9] to-[#98ddd7] p-[4px] shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_18px_-16px_rgba(78,174,169,0.55)]">
+          <div className="mx-auto w-full max-w-5xl rounded-xl bg-gradient-to-br from-[#4a4f57] via-[#30353d] to-[#5b616a] p-[4px] shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_10px_20px_-16px_rgba(37,41,47,0.55)]">
             <div className="space-y-5 rounded-[10px] bg-white p-4 text-center sm:p-5">
               <div className="space-y-4">
-                <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#1f6f6a] sm:text-4xl">
+                <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#2f8e63] sm:text-4xl">
                   High-Throughput Without Data Quality Trade-offs
                 </h3>
-                <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#5bb8b2] sm:text-lg">
+                <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#1f6f6a] sm:text-lg">
                   Conventional workflows force a choice between speed and sensitivity.
                   <br />
                   Invibragen breaks that trade-off.
@@ -353,7 +356,10 @@ export function HomePage() {
               Spanda technology improves ionization efficiency while supporting broad applicability across analytes, matrices, and experimental designs.
             </p>
             <div className="relative flex flex-wrap gap-3">
-              <Button asChild>
+              <Button
+                asChild
+                className="border-[#184f3d]/30 bg-[#184f3d] shadow-[0_4px_12px_-9px_rgba(24,79,61,0.85)] hover:bg-[#144333]"
+              >
                 <Link to="/contact">Contact Us</Link>
               </Button>
               <Button asChild variant="outline">
