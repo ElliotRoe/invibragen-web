@@ -295,7 +295,7 @@ export function HomePage() {
             </div>
           </div>
 
-          <div className="grid gap-8 px-4 pb-8 pt-10 sm:px-6 md:grid-cols-3 md:gap-0 lg:px-8">
+          <div className="grid gap-8 rounded-2xl border border-[#d6e6df] bg-[radial-gradient(circle_at_14%_8%,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.18)_22%,rgba(255,255,255,0)_52%),radial-gradient(140%_120%_at_50%_50%,rgba(0,0,0,0)_64%,rgba(65,94,84,0.06)_100%),radial-gradient(circle_at_16%_12%,rgba(243,252,244,0.34)_0%,rgba(221,249,223,0.11)_24%,rgba(221,249,223,0)_56%),radial-gradient(130%_110%_at_50%_52%,rgba(247,253,248,0.74)_0%,rgba(221,249,223,0.24)_68%,rgba(221,249,223,0.3)_100%),linear-gradient(140deg,rgba(221,249,223,0.22)_0%,rgba(248,253,248,0.82)_50%,rgba(221,249,223,0.24)_100%)] shadow-[0_1px_0_rgba(255,255,255,0.55)_inset,0_12px_26px_-22px_rgba(32,56,46,0.22)] px-4 pb-8 pt-10 sm:px-6 md:grid-cols-3 md:gap-0 lg:px-8">
             {pillars.map((pillar, index) => {
               const Icon = pillar.icon
               return (
@@ -340,7 +340,7 @@ export function HomePage() {
         <Card className="overflow-hidden">
           <CardContent className="relative space-y-5">
             <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-brand-mint/70 blur-3xl" />
-            <p className="relative text-xs font-semibold uppercase tracking-[0.2em] text-brand">
+            <p className="relative text-xs font-semibold uppercase tracking-[0.2em] text-[#184f3d]">
               Powered by Spanda Technology
             </p>
             <h2 className="relative max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
