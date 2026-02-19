@@ -164,8 +164,8 @@ function ComparisonChart() {
               (Nano-flow)
             </text>
 
-            <circle cx="700" cy="186" fill="#08B150" r="12" />
-            <text fill="#069944" fontSize="16" fontWeight="700" textAnchor="middle" x="700" y="218">
+            <circle cx="686" cy="176" fill="#08B150" r="12" />
+            <text fill="#0b7a45" fontSize="14" fontWeight="400" textAnchor="middle" x="686" y="208">
               INVIBRAGEN
             </text>
 
@@ -287,7 +287,7 @@ export function HomePage() {
                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#333333] sm:text-lg">
                   Conventional workflows force a choice between speed and sensitivity.
                   <br />
-                  <span className="text-[#069944]">Invibragen breaks that trade-off.</span>
+                  <span className="text-[#0b7a45]">Invibragen breaks that trade-off.</span>
                 </p>
               </div>
 
@@ -295,7 +295,7 @@ export function HomePage() {
             </div>
           </div>
 
-          <div className="grid gap-8 border-t border-border/70 bg-[#e8f6ee] px-4 pb-8 pt-10 sm:px-6 md:grid-cols-3 md:gap-0 lg:px-8">
+          <div className="grid gap-8 px-4 pb-8 pt-10 sm:px-6 md:grid-cols-3 md:gap-0 lg:px-8">
             {pillars.map((pillar, index) => {
               const Icon = pillar.icon
               return (
@@ -314,10 +314,10 @@ export function HomePage() {
                   </div>
 
                   <div>
-                    <p className="font-display text-3xl font-semibold tracking-tight text-white">
+                    <p className="font-display text-3xl font-semibold tracking-tight text-[#184f3d]">
                       {pillar.title}
                     </p>
-                    <p className="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand">
+                    <p className="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#184f3d]">
                       {pillar.kicker}
                     </p>
                   </div>
@@ -329,12 +329,6 @@ export function HomePage() {
                       <li key={detail}>{detail}</li>
                     ))}
                   </ul>
-                  <a
-                    className="inline-flex text-sm font-semibold text-brand underline-offset-2 hover:text-brand-charcoal hover:underline"
-                    href={`#published-results-${index + 1}`}
-                  >
-                    View Published Results
-                  </a>
                 </article>
               )
             })}
