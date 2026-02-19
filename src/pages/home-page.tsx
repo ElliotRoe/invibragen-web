@@ -281,13 +281,13 @@ export function HomePage() {
           <div className="mx-auto w-full max-w-5xl rounded-xl bg-gradient-to-br from-[#0f3f2f] via-[#1f6f4f] to-[#4ea37b] p-[4px] shadow-[inset_0_1px_0_rgba(255,255,255,0.3),0_12px_24px_-16px_rgba(15,63,47,0.45)]">
             <div className="space-y-5 rounded-[10px] bg-white p-4 text-center sm:p-5">
               <div className="space-y-2">
-                <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#2f8e63] sm:text-4xl">
+                <h3 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#333333] sm:text-4xl">
                   High-Throughput Without Data Quality Trade-offs
                 </h3>
-                <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#3a9b71] sm:text-lg">
+                <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#333333] sm:text-lg">
                   Conventional workflows force a choice between speed and sensitivity.
                   <br />
-                  <span className="font-semibold text-[#3a9b71]">Invibragen breaks that trade-off.</span>
+                  <span className="font-semibold text-[#08B150]">Invibragen breaks that trade-off.</span>
                 </p>
               </div>
 
