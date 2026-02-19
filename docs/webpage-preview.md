@@ -1,15 +1,7 @@
 # Webpage Preview
 
-A fresh homepage preview was captured via Playwright on 2026-02-18 and is available as `webpage-preview-2026-02-18.png`.
+A fresh full-page preview of the current home page was captured in this session using Playwright while running Vite locally on port `4173`.
 
-Preview artifact:
+- Preview artifact: `browser:/tmp/codex_browser_invocations/2159c90e352a5018/artifacts/artifacts/webpage-preview.png`
+- Capture command: `npm run dev -- --host 0.0.0.0 --port 4173`
 
-- `browser:/tmp/codex_browser_invocations/8ec4f14fbf1a5cc8/artifacts/artifacts/webpage-preview-2026-02-18.png`
-
-## Regenerate locally
-
-```bash
-npm run dev -- --host 0.0.0.0 --port 4173
-```
-
-Then capture the page at `http://localhost:4173/`.
