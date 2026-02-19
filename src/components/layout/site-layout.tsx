@@ -15,7 +15,7 @@ export function SiteLayout() {
       <header className="pt-6 sm:pt-8">
         <div className="container flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <Link to="/" className="inline-flex flex-col gap-1">
-            <span className="font-display text-2xl font-bold leading-none tracking-[0.02em] sm:text-3xl">
+            <span className="font-display text-2xl font-normal leading-none tracking-[0.02em] sm:text-3xl">
               INVIBRAGEN
             </span>
             <span className="text-xs uppercase tracking-[0.18em] text-brand-charcoal/90">
