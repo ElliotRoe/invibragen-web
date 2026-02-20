@@ -64,7 +64,7 @@ export function AboutPage() {
     <div className="space-y-10 sm:space-y-12">
       <section className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
         <div className="space-y-6">
-          <span className="inline-flex rounded-full bg-brand-mint px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand-charcoal">
+          <span className="inline-flex rounded-full border border-[#d9dfdb] bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#184f3d] shadow-[0_2px_6px_rgba(15,23,42,0.08)]">
             About
           </span>
 
@@ -86,7 +86,7 @@ export function AboutPage() {
 
         <Card className="bg-white">
           <CardContent className="space-y-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand">Leadership Team</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#184f3d]">Leadership Team</p>
             <div className="space-y-4">
               <article className="flex items-start gap-4 rounded-xl border border-border/80 bg-white p-4">
                 <img
@@ -127,7 +127,7 @@ export function AboutPage() {
       <section className="space-y-5" id="selected-publications">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">Selected Publications</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#184f3d]">Selected Publications</p>
             <h2 className="font-display text-3xl font-semibold tracking-tight text-brand-charcoal sm:text-4xl">
               Peer-reviewed research highlights
             </h2>
@@ -166,19 +166,19 @@ export function AboutPage() {
               {publication.outlet} • {publication.year}
             </p>
             <a
-              className="group inline-flex items-center gap-2 text-balance font-display text-2xl font-semibold leading-tight tracking-tight text-brand-charcoal hover:text-brand sm:text-3xl"
+              className="group inline-flex items-center gap-2 text-balance font-display text-2xl font-semibold leading-tight tracking-tight text-brand-charcoal hover:text-[#184f3d] sm:text-3xl"
               href={publication.href}
               rel="noreferrer"
               target="_blank"
             >
               <span>{publication.title}</span>
-              <ExternalLink className="h-4 w-4 shrink-0 text-brand transition-transform group-hover:translate-x-0.5" />
+              <ExternalLink className="h-4 w-4 shrink-0 text-[#184f3d] transition-transform group-hover:translate-x-0.5" />
             </a>
             <p className="max-w-3xl text-sm leading-relaxed text-foreground/85 sm:text-base">
               {publication.summary}
             </p>
             <a
-              className="inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-charcoal"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#184f3d] hover:text-brand-charcoal"
               href={publication.href}
               rel="noreferrer"
               target="_blank"
@@ -195,7 +195,7 @@ export function AboutPage() {
               key={item.title}
               aria-label={`Show publication ${index + 1}`}
               className={`h-2.5 rounded-full transition-all ${
-                index === activePublication ? 'w-8 bg-brand' : 'w-2.5 bg-border'
+                index === activePublication ? 'w-8 bg-[#184f3d]' : 'w-2.5 bg-border'
               }`}
               onClick={() => setActivePublication(index)}
               type="button"

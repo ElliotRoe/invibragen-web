@@ -28,7 +28,7 @@ export function ContactPage() {
 
           <p className="text-lg">
             <span className="font-semibold">Email: </span>
-            <a className="text-brand underline" href="mailto:contact@invibragen.net">
+            <a className="text-[#184f3d] underline" href="mailto:contact@invibragen.net">
               contact@invibragen.net
             </a>
           </p>
@@ -36,7 +36,7 @@ export function ContactPage() {
 
         <Card className="bg-white/95 lg:justify-self-end">
           <CardContent className="space-y-3 p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand">Team</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#184f3d]">Team</p>
             <div className="space-y-3">
               <article className="flex items-center gap-3 rounded-xl border border-border/75 bg-white p-3">
                 <img
