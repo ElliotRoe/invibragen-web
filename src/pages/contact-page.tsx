@@ -14,10 +14,6 @@ export function ContactPage() {
     <div className="space-y-8 sm:space-y-10">
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
         <div className="space-y-5">
-          <span className="inline-flex rounded-full border border-[#e5e7eb] bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#166534] shadow-sm">
-            Contact
-          </span>
-
           <h1 className="font-display text-4xl font-semibold tracking-tight text-[#339966] sm:text-5xl">
             Start a conversation
           </h1>
@@ -74,7 +70,7 @@ export function ContactPage() {
 
       <Card className="">
         <CardContent className="space-y-6">
-          <h2 className="text-sm font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+          <h2 className="text-sm font-bold uppercase tracking-[0.1em] text-muted-foreground">
             Contact Form
           </h2>
 
