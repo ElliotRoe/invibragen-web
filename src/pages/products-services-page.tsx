@@ -42,19 +42,22 @@ export function ProductsServicesPage() {
     <div className="space-y-12 sm:space-y-16">
       <section className="grid gap-8 lg:grid-cols-[0.94fr_1.06fr] lg:items-start">
         <div className="space-y-6">
-          <span className="inline-flex rounded-full bg-brand-mint px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand-charcoal">
+          <span className="inline-flex rounded-full border border-[#d8dfdb] bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#184f3d] shadow-[0_2px_6px_rgba(15,23,42,0.08)]">
             Spanda Platform
           </span>
 
           <h1 className="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-            Powered by <span className="text-brand">Spanda</span> technology
+            Powered by <span className="text-[#339966]">Spanda</span> technology
           </h1>
 
           <p className="text-base leading-relaxed text-foreground/90">
             Spanda is Invibragen&apos;s proprietary vibrating sharp-edge spray ionization (VSSI) technology, designed to enhance ionization efficiency while supporting high-throughput, multimodal mass spectrometry workflows.
           </p>
 
-          <Button asChild>
+          <Button
+            asChild
+            className="border-[#184f3d]/30 bg-[#184f3d] shadow-[0_4px_12px_-9px_rgba(24,79,61,0.85)] hover:bg-[#144333]"
+          >
             <Link to="/contact">Find Out More</Link>
           </Button>
         </div>
@@ -71,8 +74,8 @@ export function ProductsServicesPage() {
       <section className="space-y-6">
         <div className="section-divider" />
         <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Product Line</p>
-          <h2 className="font-display text-3xl font-bold tracking-tight text-brand-charcoal sm:text-4xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#184f3d]">Product Line</p>
+          <h2 className="font-display text-3xl font-bold tracking-tight text-[#27374a] sm:text-4xl">
             Three source options, each tuned to a different workflow profile
           </h2>
         </div>
@@ -88,7 +91,7 @@ export function ProductsServicesPage() {
                 className="grid gap-5 rounded-2xl border border-border/70 bg-white/72 p-5 md:grid-cols-2 md:items-center md:p-6"
               >
                 <div className={cn('space-y-3', reverse ? 'md:order-2' : '')}>
-                  <div className="inline-flex rounded-lg bg-brand-mint p-2">
+                  <div className="inline-flex rounded-lg border border-[#d6e6df] bg-white p-2">
                     <Icon className="h-4 w-4 text-brand-charcoal" />
                   </div>
                   <h3 className="font-display text-2xl font-semibold tracking-tight text-brand-charcoal">
@@ -115,7 +118,7 @@ export function ProductsServicesPage() {
 
       <section className="space-y-7">
         <div className="space-y-2 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Services</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#184f3d]">Services</p>
           <h2 className="font-display text-4xl font-bold uppercase tracking-[0.05em] text-brand-charcoal sm:text-5xl">
             Work With Us
           </h2>
@@ -155,7 +158,10 @@ export function ProductsServicesPage() {
             </div>
 
             <div>
-              <Button asChild>
+              <Button
+                asChild
+                className="border-[#184f3d]/30 bg-[#184f3d] shadow-[0_4px_12px_-9px_rgba(24,79,61,0.85)] hover:bg-[#144333]"
+              >
                 <Link to="/contact">Request A Pilot</Link>
               </Button>
             </div>
