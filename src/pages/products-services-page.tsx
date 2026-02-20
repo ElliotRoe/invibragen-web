@@ -74,7 +74,7 @@ export function ProductsServicesPage() {
       <section className="space-y-6">
         <div className="section-divider" />
         <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#184f3d]">Product Line</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#339966]">Product Line</p>
           <h2 className="font-display text-3xl font-bold tracking-tight text-[#27374a] sm:text-4xl">
             Three source options, each tuned to a different workflow profile
           </h2>
@@ -118,8 +118,8 @@ export function ProductsServicesPage() {
 
       <section className="space-y-7">
         <div className="space-y-2 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#184f3d]">Services</p>
-          <h2 className="font-display text-4xl font-bold uppercase tracking-[0.05em] text-brand-charcoal sm:text-5xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#339966]">Services</p>
+          <h2 className="font-display text-4xl font-semibold uppercase tracking-[0.05em] text-[#333333] sm:text-5xl">
             Work With Us
           </h2>
         </div>
