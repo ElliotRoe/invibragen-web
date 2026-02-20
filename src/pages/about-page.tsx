@@ -68,7 +68,7 @@ export function AboutPage() {
             About
           </span>
 
-          <h1 className="font-display text-4xl font-bold tracking-tight text-brand-charcoal sm:text-5xl">
+          <h1 className="font-display text-3xl font-semibold tracking-tight text-[#4a9a6b] sm:text-4xl">
             About Invibragen
           </h1>
 
