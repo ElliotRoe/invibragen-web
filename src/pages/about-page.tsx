@@ -49,6 +49,7 @@ const publications: Publication[] = [
 
 export function AboutPage() {
   const [activePublication, setActivePublication] = useState(0)
+  const primaryHeadingClass = 'font-display text-3xl font-semibold tracking-tight text-brand-charcoal sm:text-4xl'
 
   const publication = publications[activePublication]
 
@@ -68,7 +69,7 @@ export function AboutPage() {
             About
           </span>
 
-          <h1 className="font-display text-3xl font-semibold tracking-tight text-[#4a9a6b] sm:text-4xl">
+          <h1 className={primaryHeadingClass}>
             About Invibragen
           </h1>
 
@@ -86,7 +87,7 @@ export function AboutPage() {
 
         <Card className="bg-white">
           <CardContent className="space-y-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#184f3d]">Leadership Team</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#166534]">Leadership Team</p>
             <div className="space-y-4">
               <article className="flex items-start gap-4 rounded-xl border border-border/80 bg-white p-4">
                 <img
@@ -127,8 +128,8 @@ export function AboutPage() {
       <section className="space-y-5" id="selected-publications">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#184f3d]">Selected Publications</p>
-            <h2 className="font-display text-3xl font-semibold tracking-tight text-brand-charcoal sm:text-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#166534]">Selected Publications</p>
+            <h2 className={primaryHeadingClass}>
               Peer-reviewed research highlights
             </h2>
             <p className="max-w-2xl text-sm leading-relaxed text-foreground/85 sm:text-base">
@@ -178,7 +179,7 @@ export function AboutPage() {
               {publication.summary}
             </p>
             <a
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#184f3d] hover:text-brand-charcoal"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#166534] hover:text-brand-charcoal"
               href={publication.href}
               rel="noreferrer"
               target="_blank"

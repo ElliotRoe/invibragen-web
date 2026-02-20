@@ -14,7 +14,7 @@ export function ContactPage() {
     <div className="space-y-8 sm:space-y-10">
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
         <div className="space-y-5">
-          <span className="inline-flex rounded-full bg-brand-mint px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-brand-charcoal">
+          <span className="inline-flex rounded-full border border-[#e5e7eb] bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#166534] shadow-sm">
             Contact
           </span>
 
@@ -28,7 +28,7 @@ export function ContactPage() {
 
           <p className="text-lg">
             <span className="font-semibold">Email: </span>
-            <a className="text-[#184f3d] underline" href="mailto:contact@invibragen.net">
+            <a className="text-[#166534] underline" href="mailto:contact@invibragen.net">
               contact@invibragen.net
             </a>
           </p>
