@@ -66,10 +66,6 @@ export function AboutPage() {
     <div className="space-y-10 sm:space-y-12">
       <section className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
         <div className="space-y-6">
-          <span className="inline-flex rounded-full border border-[#d9dfdb] bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#184f3d] shadow-[0_2px_6px_rgba(15,23,42,0.08)]">
-            About
-          </span>
-
           <h1 className={aboutHeadingClass}>
             About Invibragen
           </h1>
@@ -88,7 +84,7 @@ export function AboutPage() {
 
         <Card className="bg-white">
           <CardContent className="space-y-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#166534]">Leadership Team</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#339966]">Leadership Team</p>
             <div className="space-y-4">
               <article className="flex items-start gap-4 rounded-xl border border-border/80 bg-white p-4">
                 <img
@@ -129,7 +125,7 @@ export function AboutPage() {
       <section className="space-y-5" id="selected-publications">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#166534]">Selected Publications</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#339966]">Selected Publications</p>
             <h2 className={primaryHeadingClass}>
               Peer-reviewed research highlights
             </h2>
@@ -180,7 +176,7 @@ export function AboutPage() {
               {publication.summary}
             </p>
             <a
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#166534] hover:text-brand-charcoal"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#339966] hover:text-brand-charcoal"
               href={publication.href}
               rel="noreferrer"
               target="_blank"
