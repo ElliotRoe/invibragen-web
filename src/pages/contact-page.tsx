@@ -13,18 +13,20 @@ export function ContactPage() {
   return (
     <div className="space-y-8 sm:space-y-10">
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-        <div className="space-y-5">
+        <div className="space-y-5 pt-2">
           <h1 className="font-display text-4xl font-semibold tracking-tight text-[#339966] sm:text-5xl">
             Start a conversation
           </h1>
 
           <p className="max-w-3xl text-base leading-relaxed text-foreground/90 sm:text-lg">
-            Interested in exploring high-throughput discovery workflows or initiating a pilot study? We look forward to connecting.
+            Interested in exploring high-throughput discovery workflows
+            <br />
+            or initiating a pilot study? We look forward to connecting.
           </p>
 
           <p className="text-lg">
             <span className="font-semibold">Email: </span>
-            <a className="text-[#166534] underline" href="mailto:contact@invibragen.net">
+            <a className="text-[#339966] underline" href="mailto:contact@invibragen.net">
               contact@invibragen.net
             </a>
           </p>
@@ -32,7 +34,7 @@ export function ContactPage() {
 
         <Card className="bg-white/95 lg:justify-self-end">
           <CardContent className="space-y-3 p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#184f3d]">Team</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#339966]">Team</p>
             <div className="space-y-3">
               <article className="flex items-center gap-3 rounded-xl border border-border/75 bg-white p-3">
                 <img
@@ -77,27 +79,27 @@ export function ContactPage() {
           <form className="grid gap-4 sm:grid-cols-2" onSubmit={handleSubmit}>
             <label className="space-y-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground">
               First Name
-              <Input placeholder="First name" autoComplete="given-name" required />
+              <Input autoComplete="given-name" required />
             </label>
 
             <label className="space-y-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground">
               Last Name
-              <Input placeholder="Last name" autoComplete="family-name" required />
+              <Input autoComplete="family-name" required />
             </label>
 
             <label className="space-y-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground sm:col-span-2">
               Work Email
-              <Input placeholder="name@institution.edu" type="email" autoComplete="email" required />
+              <Input type="email" autoComplete="email" required />
             </label>
 
             <label className="space-y-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground sm:col-span-2">
               Organization
-              <Input placeholder="Lab or institution" autoComplete="organization" />
+              <Input autoComplete="organization" />
             </label>
 
             <label className="space-y-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground sm:col-span-2">
               Message
-              <Textarea placeholder="Tell us more about your goals." required />
+              <Textarea required />
             </label>
 
             <div className="flex flex-col items-start gap-2 sm:col-span-2">
