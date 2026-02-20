@@ -309,8 +309,8 @@ export function HomePage() {
                       : ''
                   } ${index > 0 ? 'md:pl-8 lg:pl-10' : ''}`}
                 >
-                  <div className="mx-auto inline-flex rounded-lg border border-border/80 bg-white p-2.5 shadow-[0_6px_14px_-12px_rgba(31,45,60,0.45)]">
-                    <Icon className="h-4 w-4 text-[#1f5d45]" />
+                  <div className="mx-auto inline-flex">
+                    <Icon className="h-7 w-7 text-[#1f5d45]" />
                   </div>
 
                   <div>
@@ -322,7 +322,7 @@ export function HomePage() {
                     </p>
                   </div>
 
-                  <p className="text-sm leading-relaxed text-[#4b5563] sm:text-sm">{pillar.body}</p>
+                  <p className="text-sm leading-relaxed text-[#2f343a] sm:text-sm">{pillar.body}</p>
 
                   <ul className="mx-auto inline-block list-disc space-y-1 pl-4 text-left text-sm leading-relaxed text-foreground/85">
                     {pillar.details.map((detail) => {
