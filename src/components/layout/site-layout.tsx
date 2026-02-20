@@ -53,10 +53,10 @@ export function SiteLayout() {
         <div className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.08em] text-brand-charcoal">
             <div className="flex flex-wrap items-center gap-6">
-              <Link to="/about" className="hover:text-brand">
+              <Link to="/about" className="hover:text-[#184f3d]">
                 About
               </Link>
-              <Link to="/contact" className="hover:text-brand">
+              <Link to="/contact" className="hover:text-[#184f3d]">
                 Contact Us
               </Link>
             </div>
@@ -64,7 +64,7 @@ export function SiteLayout() {
               href="https://www.linkedin.com/company/example"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-brand"
+              className="hover:text-[#184f3d]"
             >
               LinkedIn
             </a>
