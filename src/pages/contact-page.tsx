@@ -18,7 +18,7 @@ export function ContactPage() {
             Contact
           </span>
 
-          <h1 className="font-display text-4xl font-bold tracking-tight text-brand-charcoal sm:text-5xl">
+          <h1 className="font-display text-4xl font-semibold tracking-tight text-[#339966] sm:text-5xl">
             Start a conversation
           </h1>
 

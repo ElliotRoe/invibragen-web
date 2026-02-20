@@ -50,6 +50,7 @@ const publications: Publication[] = [
 export function AboutPage() {
   const [activePublication, setActivePublication] = useState(0)
   const primaryHeadingClass = 'font-display text-3xl font-semibold tracking-tight text-brand-charcoal sm:text-4xl'
+  const aboutHeadingClass = 'font-display text-3xl font-semibold tracking-tight text-[#339966] sm:text-4xl'
 
   const publication = publications[activePublication]
 
@@ -69,7 +70,7 @@ export function AboutPage() {
             About
           </span>
 
-          <h1 className={primaryHeadingClass}>
+          <h1 className={aboutHeadingClass}>
             About Invibragen
           </h1>
 
