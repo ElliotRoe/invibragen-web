@@ -287,7 +287,7 @@ export function HomePage() {
                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#333333] sm:text-lg">
                   Conventional workflows force a choice between speed and sensitivity.
                   <br />
-                  <span className="text-[#0b7a45]">Invibragen breaks that trade-off.</span>
+                  <span className="font-bold text-[#0b7a45]">Invibragen breaks that trade-off.</span>
                 </p>
               </div>
 
