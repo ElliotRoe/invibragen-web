@@ -30,7 +30,7 @@ const pillars: Pillar[] = [
     visual: 'stack',
     details: [
       'Speed: Up to 10x faster turnaround from sample to insight.',
-      'Sensitivity and fidelity: Maintains signal quality at high speed.',
+      'Sensitivity and Fidelity: Maintains signal quality at high speed.',
       'Flexibility: Applicable across blood, saliva, and other matrices.',
     ],
   },
@@ -164,7 +164,7 @@ function ComparisonChart() {
               (Nano-flow)
             </text>
 
-            <circle cx="686" cy="176" fill="#08B150" r="12" />
+            <circle cx="686" cy="176" fill="#0b7a45" r="12" />
             <text fill="#0b7a45" fontSize="14" fontWeight="400" textAnchor="middle" x="686" y="208">
               INVIBRAGEN
             </text>
@@ -322,12 +322,26 @@ export function HomePage() {
                     </p>
                   </div>
 
-                  <p className="text-sm leading-relaxed text-foreground/90 sm:text-base">{pillar.body}</p>
+                  <p className="text-sm leading-relaxed text-[#4b5563] sm:text-sm">{pillar.body}</p>
 
                   <ul className="mx-auto inline-block list-disc space-y-1 pl-4 text-left text-sm leading-relaxed text-foreground/85">
-                    {pillar.details.map((detail) => (
-                      <li key={detail}>{detail}</li>
-                    ))}
+                    {pillar.details.map((detail) => {
+                      const [label, ...rest] = detail.split(':')
+                      const underlineLabel = pillar.title === 'Move Faster' && rest.length > 0
+
+                      return (
+                        <li key={detail}>
+                          {underlineLabel ? (
+                            <>
+                              <span className="underline">{label}</span>
+                              :{rest.join(':')}
+                            </>
+                          ) : (
+                            detail
+                          )}
+                        </li>
+                      )
+                    })}
                   </ul>
                 </article>
               )
