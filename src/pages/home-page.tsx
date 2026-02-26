@@ -4,7 +4,6 @@ import {
   BookOpenText,
   CircleDollarSign,
   Clock3,
-  FlaskConical,
   Microscope,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -63,17 +62,17 @@ const pillars: Pillar[] = [
 const leadershipStats = [
   {
     icon: Award,
-    value: '6',
-    label: 'Innovation Awards',
+    value: '3',
+    label: 'Patents Pending',
   },
   {
-    icon: FlaskConical,
-    value: '5-YR',
-    label: 'NSF & NIH-Funded\nResearch Programs',
+    icon: CircleDollarSign,
+    value: '$6.5M+',
+    label: 'NSF & NIH-Funded\nResearch Awards',
   },
   {
     icon: BookOpenText,
-    value: '105K+',
+    value: '150+',
     label: 'Scientific Citations',
   },
 ]
