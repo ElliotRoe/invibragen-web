@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet } from 'react-router-dom'
+import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 
 import { cn } from '../../lib/utils'
 
@@ -10,8 +10,25 @@ const navItems = [
 ]
 
 export function SiteLayout() {
+  const { pathname } = useLocation()
+  const isHomePage = pathname === '/'
+
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {isHomePage ? (
+        <div className="w-full bg-[#184f3d] text-white">
+          <div className="container flex h-11 items-center gap-6">
+            <p className="text-sm font-medium leading-none">Meet the Invibragen team at ACS Spring 2026.</p>
+            <Link
+              to="/contact"
+              className="inline-flex h-8 items-center rounded-md bg-white px-3 text-xs font-semibold uppercase tracking-[0.06em] text-[#184f3d] transition-colors hover:bg-white/90"
+            >
+              Schedule a Meeting
+            </Link>
+          </div>
+        </div>
+      ) : null}
+
       <header className="pt-6 sm:pt-8">
         <div className="container flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <Link to="/" className="inline-flex flex-col gap-1">
