@@ -1,3 +1,5 @@
+import { Mail } from 'lucide-react'
+
 import { Button } from '../components/ui/button'
 import { Card, CardContent } from '../components/ui/card'
 
@@ -19,8 +21,12 @@ export function ContactPage() {
             or initiating a pilot study? We look forward to connecting.
           </p>
 
-          <p className="text-lg">
-            <span className="font-semibold">Email: </span>
+          <Button asChild>
+            <a href={contactUsHref}>Email Our Team</a>
+          </Button>
+
+          <p className="flex items-center gap-2 text-lg">
+            <Mail aria-hidden="true" className="h-5 w-5 text-[#339966]" />
             <a className="text-[#339966] underline" href="mailto:contact@invibragen.net">
               contact@invibragen.net
             </a>
@@ -29,7 +35,9 @@ export function ContactPage() {
 
         <Card className="bg-white/95 lg:justify-self-end">
           <CardContent className="space-y-3 p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#339966]">Team</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#339966]">
+              Leadership Team
+            </p>
             <div className="space-y-3">
               <article className="flex items-center gap-3 rounded-xl border border-border/75 bg-white p-3">
                 <img
@@ -65,21 +73,6 @@ export function ContactPage() {
         </Card>
       </section>
 
-      <Card className="">
-        <CardContent className="space-y-6">
-          <h2 className="text-sm font-bold uppercase tracking-[0.1em] text-muted-foreground">Contact Us</h2>
-
-          <div className="space-y-3">
-            <p className="max-w-2xl text-sm leading-relaxed text-foreground/80 sm:text-base">
-              Use the link below to open your email client with both recipients and the subject line
-              pre-populated.
-            </p>
-            <Button asChild>
-              <a href={contactUsHref}>Email Invibragen</a>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
     </div>
   )
 }
