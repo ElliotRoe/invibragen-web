@@ -1,14 +1,9 @@
-import type { FormEvent } from 'react'
-
 import { Button } from '../components/ui/button'
 import { Card, CardContent } from '../components/ui/card'
-import { Input } from '../components/ui/input'
-import { Textarea } from '../components/ui/textarea'
 
 export function ContactPage() {
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-  }
+  const contactUsHref =
+    'mailto:contact@invibragen.net,invibragen@gmail.com?subject=Contact%20Us'
 
   return (
     <div className="space-y-8 sm:space-y-10">
@@ -72,43 +67,17 @@ export function ContactPage() {
 
       <Card className="">
         <CardContent className="space-y-6">
-          <h2 className="text-sm font-bold uppercase tracking-[0.1em] text-muted-foreground">
-            Contact Form
-          </h2>
+          <h2 className="text-sm font-bold uppercase tracking-[0.1em] text-muted-foreground">Contact Us</h2>
 
-          <form className="grid gap-4 sm:grid-cols-2" onSubmit={handleSubmit}>
-            <label className="space-y-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground">
-              First Name
-              <Input autoComplete="given-name" required />
-            </label>
-
-            <label className="space-y-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground">
-              Last Name
-              <Input autoComplete="family-name" required />
-            </label>
-
-            <label className="space-y-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground sm:col-span-2">
-              Work Email
-              <Input type="email" autoComplete="email" required />
-            </label>
-
-            <label className="space-y-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground sm:col-span-2">
-              Organization
-              <Input autoComplete="organization" />
-            </label>
-
-            <label className="space-y-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground sm:col-span-2">
-              Message
-              <Textarea required />
-            </label>
-
-            <div className="flex flex-col items-start gap-2 sm:col-span-2">
-              <Button type="submit">Send Inquiry</Button>
-              <p className="text-xs text-muted-foreground">
-                Placeholder form: submission handling will be connected once your preferred backend is chosen.
-              </p>
-            </div>
-          </form>
+          <div className="space-y-3">
+            <p className="max-w-2xl text-sm leading-relaxed text-foreground/80 sm:text-base">
+              Use the link below to open your email client with both recipients and the subject line
+              pre-populated.
+            </p>
+            <Button asChild>
+              <a href={contactUsHref}>Email Invibragen</a>
+            </Button>
+          </div>
         </CardContent>
       </Card>
     </div>
