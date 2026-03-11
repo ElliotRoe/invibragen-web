@@ -213,7 +213,7 @@ export function HomePage() {
             Built for Research Labs
           </span>
 
-          <h1 className="max-w-[37rem] font-display text-5xl font-semibold leading-[1.1] tracking-[-0.012em] text-brand-charcoal sm:text-[4.15rem] lg:text-[4.7rem] lg:leading-[1.14]">
+          <h1 className="max-w-[37rem] font-display text-5xl font-[650] leading-[1.1] tracking-[-0.012em] text-brand-charcoal sm:text-[4.15rem] lg:text-[4.7rem] lg:leading-[1.14]">
             <span className="block">
               <span className="text-[#52525b]">Move</span> <span className="bg-gradient-to-r from-[#1f7a52] via-[#2f8e63] to-[#58ad82] bg-clip-text text-transparent">Faster.</span>
             </span>
