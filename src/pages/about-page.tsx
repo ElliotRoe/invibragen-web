@@ -72,7 +72,7 @@ export function AboutPage() {
 
           <div className="space-y-6 text-base leading-relaxed text-foreground/90 sm:text-lg">
             <p>
-              Invibragen focuses on enabling high-throughput molecular analysis and advancing cutting-edge research in ionization sensitivity, ion source utility, and emerging analytical applications. The company&apos;s Spanda platform is backed by peer-reviewed research and supported by federal research funding, including multiple awards from the U.S. National Science Foundation and National Institutes of Health.
+              Invibragen enables ultra-high-throughput molecular analysis and advances next-generation research in ionization sensitivity, ion source performance, and emerging analytical applications. The company&apos;s Spanda<sup className="align-super relative top-[0.08em] text-[0.55em]">TM</sup> platform is supported by peer-reviewed research and federal funding, including multiple awards from the U.S. National Science Foundation and National Institutes of Health.
             </p>
 
             <p>
